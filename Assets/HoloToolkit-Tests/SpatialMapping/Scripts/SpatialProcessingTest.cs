@@ -24,7 +24,7 @@ namespace HoloToolkit.Unity.SpatialMapping.Tests
         /// <summary>
         /// Indicates if processing of the surface meshes is complete.
         /// </summary>
-        private bool meshesProcessed = false;
+        private bool meshesProcessed;
 
         /// <summary>
         /// GameObject initialization.

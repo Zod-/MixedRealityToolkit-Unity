@@ -19,7 +19,7 @@ namespace HoloToolkit.Unity.InputModule.Tests
                              INavigationHandler
     {
         [Tooltip("Set to true if gestures update (ManipulationUpdated, NavigationUpdated) should be logged. Note that this can impact performance." )]
-        public bool LogGesturesUpdateEvents = false;
+        public bool LogGesturesUpdateEvents;
 
         public void OnInputUp(InputEventData eventData)
         {

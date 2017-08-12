@@ -11,7 +11,7 @@ namespace HoloToolkit.Unity
     {
         protected UAudioManagerBase<TEvent> myTarget;
         private string[] eventNames;
-        private int selectedEventIndex = 0;
+        private int selectedEventIndex;
         private readonly string[] posTypes = { "2D", "3D", "Spatial Sound" };
         private Rect editorCurveSize = new Rect(0f, 0f, 1f, 1f);
 

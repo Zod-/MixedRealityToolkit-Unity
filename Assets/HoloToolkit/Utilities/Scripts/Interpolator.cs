@@ -24,7 +24,7 @@ namespace HoloToolkit.Unity
         public float RotationDegreesPerSecond = 720.0f;
 
         // Adjusts rotation speed based on angular distance
-        public float RotationSpeedScaler = 0.0f;
+        public float RotationSpeedScaler;
 
         // The amount to scale per second
         public float ScalePerSecond = 5.0f;
@@ -32,7 +32,7 @@ namespace HoloToolkit.Unity
         // Lerp the estimated targets towards the object each update,
         // slowing and smoothing movement.
         [HideInInspector]
-        public bool SmoothLerpToTarget = false;
+        public bool SmoothLerpToTarget;
         [HideInInspector]
         public float SmoothPositionLerpRatio = 0.5f;
         [HideInInspector]

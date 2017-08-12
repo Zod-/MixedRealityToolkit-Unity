@@ -68,7 +68,7 @@ namespace HoloToolkit.Examples.SharingWithUNET
         /// <summary>
         /// Keeps track of if we created the anchor.
         /// </summary>
-        private bool createdAnchor = false;
+        private bool createdAnchor;
 
         /// <summary>
         /// The object to attach the anchor to when created or imported.
@@ -83,12 +83,12 @@ namespace HoloToolkit.Examples.SharingWithUNET
         /// <summary>
         /// The anchorData to import.
         /// </summary>
-        private byte[] anchorData = null;
+        private byte[] anchorData;
 
         /// <summary>
         /// Tracks if we have updated data to import.
         /// </summary>
-        private bool gotOne = false;
+        private bool gotOne;
 
         /// <summary>
         /// Keeps track of the name of the anchor we are exporting.

@@ -9,9 +9,9 @@ namespace HoloToolkit.Unity
 {
     public class UAudioProfiler : EditorWindow
     {
-        private int currentFrame = 0;
+        private int currentFrame;
         private List<ProfilerEvent[]> eventTimeline;
-        private Vector2 scrollOffset = new Vector2();
+        private Vector2 scrollOffset;
         private const int MaxFrames = 300;
 
         private class ProfilerEvent

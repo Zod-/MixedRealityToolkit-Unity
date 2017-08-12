@@ -22,7 +22,7 @@ namespace HoloToolkit.Unity.InputModule
         public AxisController KeyboardXYTranslationAxisControl;
         public AxisController KeyboardXZTranslationAxisControl;
 
-        public bool JoystickSupported = false;
+        public bool JoystickSupported;
         public AxisController JoystickXYRotationAxisControl;
         public AxisController JoystickXYTranslationAxisControl;
         public AxisController JoystickXZTranslationAxisControl;

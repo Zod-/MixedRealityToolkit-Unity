@@ -63,7 +63,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// The BoundedPlane associated with the SurfacePlane object.
         /// </summary>
-        private BoundedPlane plane = new BoundedPlane();
+        private BoundedPlane plane;
 
         /// <summary>
         /// Gets or Sets the BoundedPlane, which determines the orientation/size/position of the gameObject.

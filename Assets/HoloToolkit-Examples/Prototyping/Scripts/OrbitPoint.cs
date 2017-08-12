@@ -12,7 +12,7 @@ namespace HoloToolkit.Examples.Prototyping
     public class OrbitPoint : MonoBehaviour
     {
         [Tooltip("position to orbit around")]
-        public Vector3 CenterPoint = new Vector3();
+        public Vector3 CenterPoint;
 
         [Tooltip("Axis to orbit around")]
         public Vector3 Axis = Vector3.forward;
@@ -24,19 +24,19 @@ namespace HoloToolkit.Examples.Prototyping
         public float RevolutionSpeed = 2.0f;
 
         [Tooltip("starting position based on 360 degrees")]
-        public float StartAngle = 0;
+        public float StartAngle;
 
         [Tooltip("Limit the amount or revolutions, set to zero for infinit")]
-        public float Revolutions = 0;
+        public float Revolutions;
 
         [Tooltip("Orbit the other way")]
-        public bool Reversed = false;
+        public bool Reversed;
 
         [Tooltip("Start automatically")]
         public bool AutoPlay = true;
 
         [Tooltip("pause the orbit or status")]
-        public bool IsPaused = false;
+        public bool IsPaused;
 
         /// <summary>
         /// The current revolution count
@@ -44,16 +44,16 @@ namespace HoloToolkit.Examples.Prototyping
         public int RevolutionCount { get; private set; }
 
         [Tooltip("Smooth in and out of the orbit")]
-        public bool SmoothEaseInOut = false;
+        public bool SmoothEaseInOut;
 
         [Tooltip("Smoothness factor")]
         public float SmoothRatio = 1;
 
         // starting angle
-        private float mAngle = 0;
+        private float mAngle;
 
         // current time
-        private float mTime = 0;
+        private float mTime;
 
         // position
         private Vector3 mPositionVector;

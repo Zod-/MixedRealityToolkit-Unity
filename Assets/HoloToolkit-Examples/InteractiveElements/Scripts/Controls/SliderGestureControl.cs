@@ -47,13 +47,13 @@ namespace HoloToolkit.Examples.InteractiveElements
         }
 
         [Tooltip("Min numeric value to display in the slider label")]
-        public float MinSliderValue = 0;
+        public float MinSliderValue;
 
         [Tooltip("Max numeric value to display in the slider label")]
         public float MaxSliderValue = 1;
 
         [Tooltip("Switches between a left justified or centered slider")]
-        public bool Centered = false;
+        public bool Centered;
 
         [Tooltip("Format the slider value and control decimal places if needed")]
         public string LabelFormat = "#.##";
@@ -75,7 +75,7 @@ namespace HoloToolkit.Examples.InteractiveElements
 
         private float AutoSliderTime = 0.25f;
         private float AutoSliderTimerCounter = 0.5f;
-        private float AutoSliderValue = 0;
+        private float AutoSliderValue;
 
         private Vector3 mSliderVector;
         private Quaternion mCachedRotation;

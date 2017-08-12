@@ -8,10 +8,10 @@ namespace HoloToolkit.UI.Keyboard
     public class SymbolKeyboard : MonoBehaviour
     {
         [SerializeField]
-        private UnityEngine.UI.Button m_PageBck = null;
+        private UnityEngine.UI.Button m_PageBck;
 
         [SerializeField]
-        private UnityEngine.UI.Button m_PageFwd = null;
+        private UnityEngine.UI.Button m_PageFwd;
 
         private void Update()
         {

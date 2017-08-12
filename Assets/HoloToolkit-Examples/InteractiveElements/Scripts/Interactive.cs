@@ -42,7 +42,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Should the button care about click and hold?
         /// </summary>
-        public bool DetectHold = false;
+        public bool DetectHold;
 
         /// <summary>
         /// Configure the amount to time for the hold event to fire
@@ -83,10 +83,10 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Timers
         /// </summary>
-        protected float mRollOffTimer = 0;
-        protected float mHoldTimer = 0;
-        protected bool mCheckRollOff = false;
-        protected bool mCheckHold = false;
+        protected float mRollOffTimer;
+        protected float mHoldTimer;
+        protected bool mCheckRollOff;
+        protected bool mCheckHold;
 
 #if UNITY_WSA || UNITY_STANDALONE_WIN
         protected KeywordRecognizer mKeywordRecognizer;
@@ -97,10 +97,10 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Internal comparison variables to allow for live state updates no matter the input method
         /// </summary>
-        protected bool mIgnoreSelect = false;
-        protected bool mCheckEnabled = false;
-        protected bool mCheckSelected = false;
-        protected bool UserInitiatedEvent = false;
+        protected bool mIgnoreSelect;
+        protected bool mCheckEnabled;
+        protected bool mCheckSelected;
+        protected bool UserInitiatedEvent;
         protected bool mAllowSelection = false;
 
         protected List<InteractiveWidget> mInteractiveWidgets = new List<InteractiveWidget>();

@@ -180,7 +180,7 @@ namespace HoloToolkit.Unity.SpatialMapping
 
         #region Internal
 
-        private static bool findPlanesRunning = false;
+        private static bool findPlanesRunning;
         private static System.Object findPlanesLock = new System.Object();
         private static DLLImports.ImportedMeshData[] reusedImportedMeshesForMarshalling;
         private static List<GCHandle> reusedPinnedMemoryHandles = new List<GCHandle>();

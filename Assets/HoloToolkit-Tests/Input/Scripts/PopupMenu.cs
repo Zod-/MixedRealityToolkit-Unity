@@ -9,16 +9,16 @@ namespace HoloToolkit.Unity.InputModule.Tests
     public class PopupMenu : MonoBehaviour, IInputClickHandler
     {
         [SerializeField]
-        private TestButton cancelButton = null;
+        private TestButton cancelButton;
 
         [SerializeField]
-        private Animator rootAnimator = null;
+        private Animator rootAnimator;
 
         [SerializeField]
-        private bool isModal = false;
+        private bool isModal;
 
         [SerializeField]
-        private bool closeOnNonTargetedTap = false;
+        private bool closeOnNonTargetedTap;
 
         private Action activatedCallback;   // called when 'place' is selected
         private Action cancelledCallback;   // called when 'back' or 'hide' is selected

@@ -60,7 +60,7 @@ namespace HoloToolkit.Unity
         }
 
         // Privates
-        private Imports.MeshData[] reusedMeshesForMarshalling = null;
+        private Imports.MeshData[] reusedMeshesForMarshalling;
         private List<GCHandle> reusedPinnedMemoryHandles = new List<GCHandle>();
 
         private Imports.RaycastResult reusedRaycastResult = new Imports.RaycastResult();

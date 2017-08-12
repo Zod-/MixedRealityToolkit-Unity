@@ -75,13 +75,13 @@ namespace HoloToolkit.Unity.InputModule
         private const float KeyboardSensitivity = 10.0f;
         private const float InputManagerAxisSensitivity = 0.05f;
 
-        private bool isMouseJumping = false;
+        private bool isMouseJumping;
         private bool appHasFocus = true;
-        private bool usingMouse = false;
+        private bool usingMouse;
 
         private bool inputManagerAxesNeedApproval = true;
-        private bool inputManagerHorizontalAxisApproved = false;
-        private bool inputManagerVerticalAxisApproved = false;
+        private bool inputManagerHorizontalAxisApproved;
+        private bool inputManagerVerticalAxisApproved;
 
         public bool AxisTypeIsKeyboard
         {

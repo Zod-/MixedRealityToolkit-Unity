@@ -16,7 +16,7 @@ namespace HoloToolkit.Unity
     {
         [Tooltip("The maximum number of AudioEvents that can be played at once. Zero (0) indicates there is no limit.")]
         [SerializeField]
-        private int globalEventInstanceLimit = 0;
+        private int globalEventInstanceLimit;
 
         [Tooltip("The desired behavior when the instance limit is reached.")]
         [SerializeField]

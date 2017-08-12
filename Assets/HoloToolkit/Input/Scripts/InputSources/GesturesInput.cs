@@ -24,7 +24,7 @@ namespace HoloToolkit.Unity.InputModule
         public RecognizerStartBehavior RecognizerStart;
 
         [Tooltip("Set to true to use the use rails (guides) for the navigation gesture, as opposed to full 3D navigation.")]
-        public bool UseRailsNavigation = false;
+        public bool UseRailsNavigation;
 
 #if UNITY_WSA
         protected GestureRecognizer gestureRecognizer;

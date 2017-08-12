@@ -24,14 +24,14 @@ namespace HoloToolkit.Unity.InputModule
         public Vector3 CursorScaleOffset = Vector3.one;
 
         [Tooltip("Should the cursor snap to the object.")]
-        public bool SnapCursor = false;
+        public bool SnapCursor;
 
         [Tooltip("If true, the normal from the gaze vector will be used to orient the cursor " +
                  "instead of the targeted object's normal at point of contact.")]
-        public bool UseGazeBasedNormal = false;
+        public bool UseGazeBasedNormal;
 
         [Tooltip("Should the cursor be hidding when this object is focused.")]
-        public bool HideCursorOnFocus = false;
+        public bool HideCursorOnFocus;
 
         [Tooltip("Cursor animation event to trigger when this object is gazed. Leave empty for none.")]
         public string CursorTriggerName;

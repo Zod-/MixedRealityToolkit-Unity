@@ -15,7 +15,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         [Tooltip("Array of gameObjects to turn on and off during focus")]
         public GameObject[] Targets;
 
-        private bool SelfHosted = false;
+        private bool SelfHosted;
         private void Awake()
         {
             if (Targets.Length == 0)

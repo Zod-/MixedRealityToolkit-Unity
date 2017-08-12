@@ -49,7 +49,7 @@ namespace HoloToolkit.Examples.SpatialUnderstandingFeatureOverview
 
         // Privates
         private DateTime timeLastQuery = DateTime.MinValue;
-        private bool placedMenuNeedsBillboard = false;
+        private bool placedMenuNeedsBillboard;
 
         // Functions
         private void Start()

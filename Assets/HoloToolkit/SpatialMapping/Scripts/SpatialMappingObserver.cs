@@ -103,14 +103,14 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// only request one mesh to be created at a time.  This variable will track
         /// if a mesh creation request is in flight.
         /// </summary>
-        private SurfaceObject? outstandingMeshRequest = null;
+        private SurfaceObject? outstandingMeshRequest;
 
         /// <summary>
         /// When surfaces are replaced or removed, rather than destroying them, we'll keep
         /// one as a spare for use in outstanding mesh requests. That way, we'll have fewer
         /// game object create/destroy cycles, which should help performance.
         /// </summary>
-        private SurfaceObject? spareSurfaceObject = null;
+        private SurfaceObject? spareSurfaceObject;
 
         /// <summary>
         /// Used to track when the Observer was last updated.

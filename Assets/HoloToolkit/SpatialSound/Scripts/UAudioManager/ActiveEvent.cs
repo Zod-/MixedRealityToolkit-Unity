@@ -11,7 +11,7 @@ namespace HoloToolkit.Unity
     /// </summary>
     public class ActiveEvent : IDisposable
     {
-        private AudioSource primarySource = null;
+        private AudioSource primarySource;
         public AudioSource PrimarySource
         {
             get
@@ -28,7 +28,7 @@ namespace HoloToolkit.Unity
             }
         }
 
-        private AudioSource secondarySource = null;
+        private AudioSource secondarySource;
         public AudioSource SecondarySource
         {
             get
@@ -67,11 +67,11 @@ namespace HoloToolkit.Unity
             private set;
         }
 
-        public AudioEvent audioEvent = null;
+        public AudioEvent audioEvent;
         public bool isStoppable = true;
         public float volDest = 1;
         public float altVolDest = 1;
-        public float currentFade = 0;
+        public float currentFade;
         public bool playingAlt = false;
         public bool isActiveTimeComplete = false;
         public float activeTime = 0;

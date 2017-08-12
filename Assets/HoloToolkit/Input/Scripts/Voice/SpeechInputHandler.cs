@@ -23,7 +23,7 @@ namespace HoloToolkit.Unity.InputModule
         public KeywordAndResponse[] Keywords;
 
         [Tooltip("Determines if this handler is a global listener, not connected to a specific gameobject")]
-        public bool IsGlobalListener = false;
+        public bool IsGlobalListener;
 
         [NonSerialized]
         private readonly Dictionary<string, UnityEvent> responses = new Dictionary<string, UnityEvent>();

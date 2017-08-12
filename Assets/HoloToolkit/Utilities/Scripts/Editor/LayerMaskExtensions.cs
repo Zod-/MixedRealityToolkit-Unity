@@ -13,7 +13,7 @@ namespace HoloToolkit.Unity
     {
         public const int LayerCount = 32;
 
-        private static string[] layerMaskNames = null;
+        private static string[] layerMaskNames;
         public static string[] LayerMaskNames
         {
             get

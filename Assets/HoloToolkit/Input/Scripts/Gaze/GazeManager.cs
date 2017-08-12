@@ -70,7 +70,7 @@ namespace HoloToolkit.Unity.InputModule
         /// If left null, no stabilization will be performed.
         /// </summary>
         [Tooltip("Stabilizer, if any, used to smooth out the gaze ray data.")]
-        public BaseRayStabilizer Stabilizer = null;
+        public BaseRayStabilizer Stabilizer;
 
         /// <summary>
         /// Transform that should be used as the source of the gaze position and orientation.

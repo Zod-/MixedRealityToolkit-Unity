@@ -23,12 +23,12 @@ namespace HoloToolkit.Examples.Prototyping
         /// <summary>
         /// GameObject to manipulate, uses the host object if no object is specified.
         /// </summary>
-        public GameObject TargetObject = null;
+        public GameObject TargetObject;
 
         /// <summary>
         /// The element of the array to use on awake
         /// </summary>
-        public int DefaultIndex = 0;
+        public int DefaultIndex;
         
         /// <summary>
         /// the current index of the appied item in the array
@@ -46,7 +46,7 @@ namespace HoloToolkit.Examples.Prototyping
             }
         }
 
-        private bool mHasInit = false;
+        private bool mHasInit;
         
         /// <summary>
         /// set the default TargetObject

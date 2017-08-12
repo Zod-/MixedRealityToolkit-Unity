@@ -9,13 +9,13 @@ namespace HoloToolkit.Unity.InputModule.Tests
     public class ButtonTimedWaiter : MonoBehaviour
     {
         [SerializeField]
-        private TestButton button = null;
+        private TestButton button;
 
         [SerializeField]
         private float TimeToWait = 1.0f;
 
         [SerializeField]
-        private TextMesh textMesh = null;
+        private TextMesh textMesh;
 
         private void Awake()
         {

@@ -32,7 +32,7 @@ namespace HoloToolkit.Examples.Prototyping
         public GameObject ReferenceObject;
 
         [Tooltip("Auto start? or status")]
-        public bool IsRunning = false;
+        public bool IsRunning;
 
         [Tooltip("translation speed : higher is faster")]
         public float LerpPositionSpeed = 1f;
@@ -41,7 +41,7 @@ namespace HoloToolkit.Examples.Prototyping
         public float LerpRotationSpeed = 0.5f;
 
         [Tooltip("Lock the x axis if the object is set to face the reference object")]
-        public bool KeepUpRight = false;
+        public bool KeepUpRight;
 
         [Tooltip("An game object containing an Interactive component to call on air-tap")]
         public GameObject ReferenceInteractive;
@@ -56,7 +56,7 @@ namespace HoloToolkit.Examples.Prototyping
         public bool KeepInFront = true;
 
         [Tooltip("Magnitism speed to move closer to the reference object")]
-        public float Magnetism = 0;
+        public float Magnetism;
 
         [Tooltip("Minimum distance to stay away from the reference object if magnitism is used")]
         public float MagnetismPaddingDistance = 1f;
@@ -71,7 +71,7 @@ namespace HoloToolkit.Examples.Prototyping
         private Quaternion mOffsetRotation;
 
         // the offset distance at start
-        private float mOffsetDistance = 0;
+        private float mOffsetDistance;
 
         // the amount of magnitism to apply
         private float mMagnetismPercentage = 1;

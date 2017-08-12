@@ -13,7 +13,7 @@ namespace HoloToolkit.Unity
     public class FixedAngularSize : MonoBehaviour
     {
         [Tooltip("Off sets the scale ratio so that text does not scale down too much. (Set to zero for linear scaling)")]
-        public float SizeRatio = 0;
+        public float SizeRatio;
 
         // The ratio between the transform's local scale and its starting
         // distance from the camera.

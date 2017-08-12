@@ -74,7 +74,7 @@ namespace HoloToolkit.Unity.InputModule
         /// </summary>
         [SerializeField]
         [Tooltip("Animator for the cursor")]
-        protected Animator CursorAnimator = null;
+        protected Animator CursorAnimator;
 
         /// <summary>
         /// Change anim stage when enabled

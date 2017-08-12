@@ -14,12 +14,12 @@ namespace HoloToolkit.Unity.SpatialMapping.Tests
     public class PlaneFindingTest : MonoBehaviour
     {
         [Range(0, 45)]
-        public float SnapToGravityThreshold = 0.0f;
+        public float SnapToGravityThreshold;
 
         [Range(0, 10)]
         public float MinArea = 1.0f;
 
-        public bool VisualizeSubPlanes = false;
+        public bool VisualizeSubPlanes;
 
         private List<PlaneFinding.MeshData> meshData = new List<PlaneFinding.MeshData>();
         private BoundedPlane[] planes;

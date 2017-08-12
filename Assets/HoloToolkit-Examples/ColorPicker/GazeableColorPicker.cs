@@ -17,7 +17,7 @@ namespace HoloToolkit.Examples.ColorPicker
         public PickedColorCallback OnGazedColor = new PickedColorCallback();
         public PickedColorCallback OnPickedColor = new PickedColorCallback();
 
-        private bool gazing = false;
+        private bool gazing;
 
         void Update()
         {

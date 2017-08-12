@@ -82,12 +82,12 @@ namespace HoloToolkit.UI.Keyboard
         /// If you are using the Keyboard prefab you can ignore this field as it will
         /// be already assigned.
         /// </summary>
-        public InputField InputField = null;
+        public InputField InputField;
 
         /// <summary>
         /// Move the axis slider based on the camera forward and the keyboard plane projection.
         /// </summary>
-        public AxisSlider InputFieldSlide = null;
+        public AxisSlider InputFieldSlide;
 
         /// <summary>
         /// Bool for toggling the slider being enabled.
@@ -102,27 +102,27 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// The panel that contains the alpha keys.
         /// </summary>
-        public Image AlphaKeyboard = null;
+        public Image AlphaKeyboard;
 
         /// <summary>
         /// The panel that contains the number and symbol keys.
         /// </summary>
-        public Image SymbolKeyboard = null;
+        public Image SymbolKeyboard;
 
         /// <summary>
         /// References abc bottom panel.
         /// </summary>
-        public Image AlphaSubKeys = null;
+        public Image AlphaSubKeys;
 
         /// <summary>
         /// References .com bottom panel.
         /// </summary>
-        public Image AlphaWebKeys = null;
+        public Image AlphaWebKeys;
 
         /// <summary>
         /// References @ bottom panel.
         /// </summary>
-        public Image AlphaMailKeys = null;
+        public Image AlphaMailKeys;
 
         private LayoutType m_LastKeyboardLayout = LayoutType.Alpha;
 
@@ -159,12 +159,12 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Current shift state of keyboard.
         /// </summary>
-        private bool m_IsShifted = false;
+        private bool m_IsShifted;
 
         /// <summary>
         /// Current caps lock state of keyboard.
         /// </summary>
-        private bool m_IsCapslocked = false;
+        private bool m_IsCapslocked;
 
         /// <summary>
         /// Accessor reporting shift state of keyboard.
@@ -185,13 +185,13 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// The position of the caret in the text field.
         /// </summary>
-        private int m_CaretPosition = 0;
+        private int m_CaretPosition;
 
 #if UNITY_WSA || UNITY_STANDALONE_WIN
         /// <summary>
         /// Reference to dictation recognizer.
         /// </summary>
-        private DictationRecognizer m_Dictation = null;
+        private DictationRecognizer m_Dictation;
 #endif
 
         /// <summary>

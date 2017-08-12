@@ -36,12 +36,12 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// The amount of horizontal spacing (in pixels) to use between items in this collection.
         /// </summary>
-        public float HorizontalSpacing = 0.0f;
+        public float HorizontalSpacing;
 
         /// <summary>
         /// The amount of vertical spacing (in pixels) to use between items in this collection.
         /// </summary>
-        public float VerticalSpacing = 0.0f;
+        public float VerticalSpacing;
 
         /// <summary>
         /// A list of items in this collection. This list should not be modified directly. Instead

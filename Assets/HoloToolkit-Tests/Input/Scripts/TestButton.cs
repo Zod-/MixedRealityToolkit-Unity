@@ -15,7 +15,7 @@ namespace HoloToolkit.Unity.InputModule.Tests
         public Transform ToolTip;
         public Renderer ToolTipRenderer;
 
-        private float toolTipTimer = 0.0f;
+        private float toolTipTimer;
         public float ToolTipFadeTime = 0.25f;
         public float ToolTipDelayTime = 0.5f;
 

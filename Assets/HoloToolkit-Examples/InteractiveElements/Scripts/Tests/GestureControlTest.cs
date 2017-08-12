@@ -19,10 +19,10 @@ namespace HoloToolkit.Examples.InteractiveElements
         public float FeebackVisualDistance = 0.95f;
         
         private Renderer mEffectRenderer;
-        private bool mHasGaze = false;
+        private bool mHasGaze;
 
         private float mTickerTime = 0.5f;
-        private float mTickerCount = 0;
+        private float mTickerCount;
 
         private void Start()
         {

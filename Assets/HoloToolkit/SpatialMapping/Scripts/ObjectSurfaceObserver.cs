@@ -72,7 +72,7 @@ namespace HoloToolkit.Unity.SpatialMapping
             }
         }
 
-        private float lastUpdateUnscaledTimeInSeconds = 0;
+        private float lastUpdateUnscaledTimeInSeconds;
 
         private void Update()
         {

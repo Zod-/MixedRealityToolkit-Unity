@@ -15,12 +15,12 @@ namespace HoloToolkit.Examples.InteractiveElements
         public InteractiveToggle[] Interactives;
 
         [Tooltip("Currently selected index or default starting index")]
-        public int SelectedIndex = 0;
+        public int SelectedIndex;
 
         [Tooltip("exposed selection changed event")]
         public UnityEvent OnSelectionEvents;
 
-        private bool mHasInit = false;
+        private bool mHasInit;
 
         private void Start()
         {

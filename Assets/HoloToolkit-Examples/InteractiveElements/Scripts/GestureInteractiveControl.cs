@@ -76,7 +76,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// Flips the CurrentDirection based on the camera forward compared to Vector3.forward.
         /// </summary>
         [Tooltip("Should we care if the Camera's forward is not Vector3.forward?")]
-        public bool FlipDirecationOnCameraForward = false;
+        public bool FlipDirecationOnCameraForward;
         
         /// <summary>
         /// Current gesture state
@@ -122,7 +122,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Is a gesture in progress?
         /// </summary>
-        protected bool GestureStarted = false;
+        protected bool GestureStarted;
 
         /// <summary>
         /// The current gesture position from the gesture origin (delta)

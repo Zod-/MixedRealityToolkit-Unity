@@ -8,7 +8,7 @@ namespace HoloToolkit.Unity.InputModule.Tests
     public class InputHandleCallbackFX : MonoBehaviour, IInputClickHandler
     {
         [SerializeField]
-        private ParticleSystem particles = null;
+        private ParticleSystem particles;
 
         private void Start()
         {

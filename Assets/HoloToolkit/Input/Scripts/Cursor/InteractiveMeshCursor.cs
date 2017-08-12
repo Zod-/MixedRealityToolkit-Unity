@@ -37,11 +37,11 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// internal state and element management
         /// </summary>
-        private float mTimer = 0;
+        private float mTimer;
 
-        private bool mHasHover = false;
-        private bool mHasHand = false;
-        private bool mIsDown = false;
+        private bool mHasHover;
+        private bool mHasHand;
+        private bool mIsDown;
         private Vector3 mBaseScale = new Vector3(1, 1, 1);
         private Vector3 mTargetScale;
         private bool mIsVisible = true;

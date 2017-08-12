@@ -36,10 +36,10 @@ namespace HoloToolkit.Examples.Prototyping
         public float LerpTime = 1f;
 
         [Tooltip("auto start? or status")]
-        public bool IsRunning = false;
+        public bool IsRunning;
 
         [Tooltip("Use the localRotation instead of world rotation")]
-        public bool ToLocalTransform = false;
+        public bool ToLocalTransform;
 
         [Tooltip("animation complete!")]
         public UnityEvent OnComplete;

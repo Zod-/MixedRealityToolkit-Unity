@@ -9,7 +9,7 @@ namespace HoloToolkit.Sharing.Tests
     public class UserNotifications : MonoBehaviour
     {
         private SessionUsersTracker usersTracker;
-        private static User localUser = null;
+        private static User localUser;
 
         private void Start()
         {

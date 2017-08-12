@@ -44,7 +44,7 @@ namespace HoloToolkit.Unity
         // These members are useful for debugging the Tagalong in Unity's
         // editor or the HoloLens.
         [Tooltip("Set to true to draw lines of interest in Unity's scene view during play-mode.")]
-        public bool DebugDrawLines = false;
+        public bool DebugDrawLines;
         [Tooltip("Useful for visualizing the Raycasts used for determining the depth to place the Tagalong. Set to 'None' to disable.")]
         public Light DebugPointLight;
 

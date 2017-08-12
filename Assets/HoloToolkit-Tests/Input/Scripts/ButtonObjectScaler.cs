@@ -8,10 +8,10 @@ namespace HoloToolkit.Unity.InputModule.Tests
     public class ButtonObjectScaler : MonoBehaviour
     {
         [SerializeField]
-        private TestButton button = null;
+        private TestButton button;
 
         [SerializeField]
-        private GameObject ObjectToScale = null;
+        private GameObject ObjectToScale;
 
         [SerializeField]
         private float ScaleIncrement = 1.0f;

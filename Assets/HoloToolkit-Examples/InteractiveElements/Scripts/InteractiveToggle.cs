@@ -46,7 +46,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// <summary>
         /// Current selected state, can be set from the Unity Editor for default behavior
         /// </summary>
-        public bool HasSelection = false;
+        public bool HasSelection;
         public void SetSelection(bool selection)
         {
             HasSelection = selection;
@@ -56,7 +56,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// A Read-only button or visual item. Passive mode ignores input, but updates the visuals as if it were enabled.
         /// Good for things like dashboard lights and data visualization
         /// </summary>
-        public bool PassiveMode = false;
+        public bool PassiveMode;
 
         /// <summary>
         /// Exposed Unity Events

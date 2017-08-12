@@ -14,7 +14,7 @@ namespace HoloToolkit.Examples.Prototyping
     public class CycleRotation : CycleArray<Vector3>
     {
         [Tooltip("use the local rotation - overrides the UseLocalTransform value of RotateToValue")]
-        public bool UseLocalRotation = false;
+        public bool UseLocalRotation;
 
         private RotateToValue mRotation;
 

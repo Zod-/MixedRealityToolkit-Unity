@@ -21,10 +21,10 @@ namespace HoloToolkit.Unity
         public bool UseUnscaledTime = true;
 
         [Tooltip("Display the sphere in red wireframe for debugging purposes.")]
-        public bool DebugDisplaySphere = false;
+        public bool DebugDisplaySphere;
 
         [Tooltip("Display a small green cube where the target position is.")]
-        public bool DebugDisplayTargetPosition = false;
+        public bool DebugDisplayTargetPosition;
 
         private Vector3 targetPosition;
         private Vector3 optimalPosition;

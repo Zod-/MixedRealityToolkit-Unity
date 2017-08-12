@@ -32,7 +32,7 @@ namespace HoloToolkit.Examples.Prototyping
         public float LerpTime = 1f;
 
         [Tooltip("Run by default? or Status")]
-        public bool IsRunning = false;
+        public bool IsRunning;
 
         [Tooltip("Animation is complete!")]
         public UnityEvent OnComplete;

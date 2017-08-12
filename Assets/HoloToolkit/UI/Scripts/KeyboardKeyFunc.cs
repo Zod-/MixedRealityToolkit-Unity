@@ -44,7 +44,7 @@ namespace HoloToolkit.UI.Keyboard
         /// <summary>
         /// Reference to gameobject's Button component.
         /// </summary>
-        private Button m_Button = null;
+        private Button m_Button;
 
         /// <summary>
         /// Get the button component.

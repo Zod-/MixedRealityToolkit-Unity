@@ -132,7 +132,7 @@ namespace HoloToolkit.Unity.InputModule
         protected GameObject TargetedObject;
         protected ICursorModifier TargetedCursorModifier;
 
-        private uint visibleHandsCount = 0;
+        private uint visibleHandsCount;
         private bool isVisible = true;
 
         private GazeManager gazeManager;

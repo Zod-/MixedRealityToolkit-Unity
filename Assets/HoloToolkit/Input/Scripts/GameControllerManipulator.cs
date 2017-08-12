@@ -49,10 +49,10 @@ namespace HoloToolkit.Unity.InputModule
         public string RotateModifierButtonName = "Fire2";
 
         [Tooltip("Move the gaze target instead of the GameObject this script is attached to")]
-        public bool MoveGazeTarget = false;
+        public bool MoveGazeTarget;
 
         private GameObject lastAffectedObject;
-        private float stickDistance = 0;
+        private float stickDistance;
 
         // Update is called once per frame
         private void Update()

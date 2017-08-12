@@ -194,7 +194,7 @@ namespace HoloToolkit.Examples.SpatialUnderstandingFeatureOverview
         // Privates
         private string spaceQueryDescription;
         private string objectPlacementDescription;
-        private uint trackedHandsCount = 0;
+        private uint trackedHandsCount;
 #if UNITY_WSA || UNITY_STANDALONE_WIN
         private KeywordRecognizer keywordRecognizer;
 

@@ -15,7 +15,7 @@ namespace HoloToolkit.Unity
     public partial class UAudioManagerBase<TEvent> : MonoBehaviour where TEvent : AudioEvent, new()
     {
         [SerializeField]
-        protected TEvent[] events = null;
+        protected TEvent[] events;
 
         protected const float InfiniteLoop = -1;
         protected List<ActiveEvent> activeEvents;

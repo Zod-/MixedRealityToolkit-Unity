@@ -19,7 +19,7 @@ namespace HoloToolkit.Unity.InputModule
 
         [Tooltip("GameObject to display when your hand is about to lose tracking.")]
         public GameObject HandGuidanceIndicator;
-        private GameObject handGuidanceIndicatorGameObject = null;
+        private GameObject handGuidanceIndicatorGameObject;
 
         // Hand source loss risk to start showing a hand indicator.
         // As the source loss risk approaches 1, the hand is closer to being out of view.
@@ -29,7 +29,7 @@ namespace HoloToolkit.Unity.InputModule
 
         private Quaternion defaultHandGuidanceRotation;
 
-        private uint? currentlyTrackedHand = null;
+        private uint? currentlyTrackedHand;
 
 #if UNITY_WSA
         protected override void Awake()

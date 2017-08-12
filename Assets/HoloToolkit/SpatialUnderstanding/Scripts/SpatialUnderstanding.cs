@@ -114,7 +114,7 @@ namespace HoloToolkit.Unity
         // Privates
         private ScanStates scanState;
 
-        private float timeSinceLastUpdate = 0.0f;
+        private float timeSinceLastUpdate;
 
         // Functions
         protected override void Awake()

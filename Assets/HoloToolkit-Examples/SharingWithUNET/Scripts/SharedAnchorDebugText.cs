@@ -26,12 +26,12 @@ namespace HoloToolkit.Examples.SharingWithUNET
         /// up the debug string.  We keep a cached copy so that we don't  
         /// rebuild the string every frame.
         /// </summary>
-        private bool wasClient = false;
-        private bool wasServer = false;
+        private bool wasClient;
+        private bool wasServer;
         private string ServerIp = "";
-        private bool anchorEstablished = false;
-        private bool wasImporting = false;
-        private bool wasDownloading = false;
+        private bool anchorEstablished;
+        private bool wasImporting;
+        private bool wasDownloading;
         private string anchorName = "";
 
         /// <summary>

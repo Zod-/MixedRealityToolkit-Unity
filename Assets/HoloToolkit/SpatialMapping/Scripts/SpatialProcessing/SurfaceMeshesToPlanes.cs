@@ -78,7 +78,7 @@ namespace HoloToolkit.Unity.SpatialMapping
         /// <summary>
         /// Indicates if SurfaceToPlanes is currently creating planes based on the Spatial Mapping Mesh.
         /// </summary>
-        private bool makingPlanes = false;
+        private bool makingPlanes;
 
 #if UNITY_EDITOR || UNITY_STANDALONE
         /// <summary>

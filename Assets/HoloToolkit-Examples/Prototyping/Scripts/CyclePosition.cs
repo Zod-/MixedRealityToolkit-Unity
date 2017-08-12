@@ -14,7 +14,7 @@ namespace HoloToolkit.Examples.Prototyping
     public class CyclePosition : CycleArray<Vector3>
     {
         [Tooltip("use local position instead of position. Overrides MoveToPosition ToLocalPosition setting.")]
-        public bool UseLocalPosition = false;
+        public bool UseLocalPosition;
 
         private MoveToPosition mMoveTranslator;
 

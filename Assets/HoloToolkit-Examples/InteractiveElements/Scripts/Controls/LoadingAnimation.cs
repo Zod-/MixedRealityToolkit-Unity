@@ -19,7 +19,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         [Tooltip("The light theme color")]
         public Color LightColor;
         [Tooltip("which theme should be used")]
-        public bool UseLightTheme = false;
+        public bool UseLightTheme;
         [Tooltip("should the loading animation auto start?")]
         public bool AutoStart = true;
 
@@ -27,7 +27,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         public GameObject[] Orbs;
         
         [Tooltip("The position to animate around")]
-        public Vector3 CenterPoint = new Vector3();
+        public Vector3 CenterPoint;
         [Tooltip("The axis for the orbit")]
         public Vector3 Axis = Vector3.forward;
         [Tooltip("Radius of the orbit")]
@@ -40,9 +40,9 @@ namespace HoloToolkit.Examples.InteractiveElements
         public float AngleSpace = 12;
 
         [Tooltip("Are we paused?")]
-        public bool IsPaused = false;
+        public bool IsPaused;
         [Tooltip("smooth easing or linear revolutions")]
-        public bool SmoothEaseInOut = false;
+        public bool SmoothEaseInOut;
         [Tooltip("If smooth easing, how smooth?")]
         public float SmoothRatio = 0.65f;
 
@@ -50,24 +50,24 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// Internal functional values
         /// </summary>
         // current angle
-        private float mAngle = 0;
+        private float mAngle;
         //current time
-        private float mTime = 0;
+        private float mTime;
         // current revolution count
-        private int mRevolutionsCount = 0;
+        private int mRevolutionsCount;
         // is it time to pause or setup the next cycle?
-        private bool mLoopPause = false;
+        private bool mLoopPause;
         // the currently fading element
-        private int mFadeIndex = 0;
+        private int mFadeIndex;
         // check the loopPause next Update
-        private bool mCheckLoopPause = false;
+        private bool mCheckLoopPause;
         // The center position
         private Vector3 mPositionVector;
         // the rotation vector during the animation
         private Vector3 mRotatedPositionVector;
         
         // the loader is starting
-        private bool mStartingLoader = false;
+        private bool mStartingLoader;
         // the index of the Orbs to start with
         private int mStartingIndex;
 

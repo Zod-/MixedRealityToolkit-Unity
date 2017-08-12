@@ -103,7 +103,7 @@ namespace HoloToolkit.Unity
         /// <summary>
         /// To prevent us from importing too often, we keep track of the last import.
         /// </summary>
-        private float timeLastImportedMesh = 0;
+        private float timeLastImportedMesh;
 
         /// <summary>
         /// For a cached SpatialUnderstanding.Instance.
@@ -137,13 +137,13 @@ namespace HoloToolkit.Unity
             /// The MeshCollider with which this mesh is associated. Must be set even if
             /// no collision mesh will be created.
             /// </summary>
-            public MeshCollider SpatialCollider = null;
+            public MeshCollider SpatialCollider;
 
             /// <summary>
             /// Whether to create collision mesh. If false, the MeshCollider attached to this
             /// object will also be disabled when Commit() is called.
             /// </summary>
-            public bool CreateMeshCollider = false;
+            public bool CreateMeshCollider;
 
             /// <summary>
             /// Clears the geometry, but does not clear the mesh.

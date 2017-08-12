@@ -10,10 +10,10 @@ namespace HoloToolkit.Unity.InputModule.Tests
     {
 
         [SerializeField]
-        private PopupMenu popupMenu = null;
+        private PopupMenu popupMenu;
 
         [SerializeField]
-        private TestButton button = null;
+        private TestButton button;
 
         private void Awake()
         {

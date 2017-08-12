@@ -64,7 +64,7 @@ namespace HoloToolkit.Unity
 
         [SerializeField]
         [Tooltip("Time the interpolator takes to get from current value to the target value")]
-        private AnimationCurve curve = null;
+        private AnimationCurve curve;
 
         /// <summary>
         /// The AnimationCurve used for evaluatng the interpolation value.
