@@ -65,7 +65,7 @@ namespace HoloToolkit.Examples.Prototyping
         {
             if (TargetObject == null)
             {
-                TargetObject = this.gameObject;
+                TargetObject = gameObject;
             }
             mStartValue = GetPosition();
         }
@@ -77,7 +77,7 @@ namespace HoloToolkit.Examples.Prototyping
         {
             if (TargetObject == null)
             {
-                TargetObject = this.gameObject;
+                TargetObject = gameObject;
             }
 
             mStartValue = GetPosition();
@@ -92,11 +92,11 @@ namespace HoloToolkit.Examples.Prototyping
         {
             if (ToLocalTransform)
             {
-                this.transform.localPosition = mStartValue;
+                transform.localPosition = mStartValue;
             }
             else
             {
-                this.transform.position = mStartValue;
+                transform.position = mStartValue;
             }
             IsRunning = false;
             mLerpTimeCounter = 0;
@@ -195,11 +195,11 @@ namespace HoloToolkit.Examples.Prototyping
 
                 if (ToLocalTransform)
                 {
-                    this.transform.localPosition = GetNewPosition(this.transform.localPosition, percent);
+                    transform.localPosition = GetNewPosition(transform.localPosition, percent);
                 }
                 else
                 {
-                    this.transform.position = GetNewPosition(this.transform.position, percent);
+                    transform.position = GetNewPosition(transform.position, percent);
                 }
 
                 if (percent >= 1)
@@ -213,13 +213,13 @@ namespace HoloToolkit.Examples.Prototyping
                 bool wasRunning = IsRunning;
                 if (ToLocalTransform)
                 {
-                    this.transform.localPosition = GetNewPosition(this.transform.localPosition, LerpTime * Time.deltaTime);
-                    IsRunning = this.transform.localPosition != TargetValue;
+                    transform.localPosition = GetNewPosition(transform.localPosition, LerpTime * Time.deltaTime);
+                    IsRunning = transform.localPosition != TargetValue;
                 }
                 else
                 {
-                    this.transform.position = GetNewPosition(this.transform.position, LerpTime * Time.deltaTime);
-                    IsRunning = this.transform.localPosition != TargetValue;
+                    transform.position = GetNewPosition(transform.position, LerpTime * Time.deltaTime);
+                    IsRunning = transform.localPosition != TargetValue;
                 }
 
                 if (IsRunning != wasRunning && !IsRunning)

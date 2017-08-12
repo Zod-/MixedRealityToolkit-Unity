@@ -55,7 +55,7 @@ namespace HoloToolkit.Examples.Prototyping
         {
             if (TargetObject == null)
             {
-                TargetObject = this.gameObject;
+                TargetObject = gameObject;
             }
         }
 

@@ -51,7 +51,7 @@ namespace HoloToolkit.Unity
                     {
                         Debug.LogFormat("SceneLauncher: Returning to SceneLauncher scene {0}.", sceneLauncherBuildIndex);
                         SceneManager.LoadScene(sceneLauncherBuildIndex, LoadSceneMode.Single);
-                        GameObject.Destroy(returnToSceneLauncher.gameObject);
+                        Destroy(returnToSceneLauncher.gameObject);
                     };
                     returnToSceneLauncher.KeywordsAndResponses[0].Response.AddListener(keywordAction);
                 }

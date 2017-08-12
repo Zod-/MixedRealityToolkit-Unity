@@ -99,7 +99,7 @@ namespace HoloToolkit.Unity
             // Move through each active event and change the settings for the AudioSource components to smoothly fade volumes.
             for (int i = 0; i < activeEvents.Count; i++)
             {
-                ActiveEvent currentEvent = this.activeEvents[i];
+                ActiveEvent currentEvent = activeEvents[i];
 
                 // If we have a secondary source (for crossfades) adjust the volume based on the current fade time for each active event.
                 if (currentEvent.SecondarySource != null && currentEvent.SecondarySource.volume != currentEvent.altVolDest)
@@ -514,7 +514,7 @@ namespace HoloToolkit.Unity
         {
             yield return new WaitForSeconds(delay);
 
-            if (this.activeEvents.Contains(activeEvent))
+            if (activeEvents.Contains(activeEvent))
             {
                 emitter.PlayClip(audioClip.sound, audioClip.looping);
             }

@@ -18,37 +18,37 @@ namespace HoloToolkit.Unity
         protected void SetUpEditor()
         {
             // Having a null array of events causes too many errors and should only happen on first adding anyway.
-            if (this.myTarget.EditorEvents == null)
+            if (myTarget.EditorEvents == null)
             {
-                this.myTarget.EditorEvents = new TEvent[0];
+                myTarget.EditorEvents = new TEvent[0];
             }
-            this.eventNames = new string[this.myTarget.EditorEvents.Length];
-            UpdateEventNames(this.myTarget.EditorEvents);
+            eventNames = new string[myTarget.EditorEvents.Length];
+            UpdateEventNames(myTarget.EditorEvents);
         }
 
         protected void DrawInspectorGUI(bool showEmitters)
         {
-            this.serializedObject.Update();
+            serializedObject.Update();
             EditorGUI.BeginChangeCheck();
-            DrawEventHeader(this.myTarget.EditorEvents);
+            DrawEventHeader(myTarget.EditorEvents);
 
-            if (this.myTarget.EditorEvents != null && this.myTarget.EditorEvents.Length > 0)
+            if (myTarget.EditorEvents != null && myTarget.EditorEvents.Length > 0)
             {
                 // Display current event in dropdown.
                 EditorGUI.indentLevel++;
-                this.selectedEventIndex = EditorGUILayout.Popup(this.selectedEventIndex, this.eventNames);
+                selectedEventIndex = EditorGUILayout.Popup(selectedEventIndex, eventNames);
 
-                if (this.selectedEventIndex < this.myTarget.EditorEvents.Length)
+                if (selectedEventIndex < myTarget.EditorEvents.Length)
                 {
                     TEvent selectedEvent;
 
-                    selectedEvent = this.myTarget.EditorEvents[this.selectedEventIndex];
-                    SerializedProperty selectedEventProperty = this.serializedObject.FindProperty("events.Array.data[" + this.selectedEventIndex.ToString() + "]");
+                    selectedEvent = myTarget.EditorEvents[selectedEventIndex];
+                    SerializedProperty selectedEventProperty = serializedObject.FindProperty("events.Array.data[" + selectedEventIndex.ToString() + "]");
                     EditorGUILayout.Space();
 
                     if (selectedEventProperty != null)
                     {
-                        DrawEventInspector(selectedEventProperty, selectedEvent, this.myTarget.EditorEvents, showEmitters);
+                        DrawEventInspector(selectedEventProperty, selectedEvent, myTarget.EditorEvents, showEmitters);
                         if (!DrawContainerInspector(selectedEventProperty, selectedEvent))
                         {
                             EditorGUI.indentLevel++;
@@ -62,11 +62,11 @@ namespace HoloToolkit.Unity
             }
 
             EditorGUI.EndChangeCheck();
-            this.serializedObject.ApplyModifiedProperties();
+            serializedObject.ApplyModifiedProperties();
 
-            if (UnityEngine.GUI.changed)
+            if (GUI.changed)
             {
-                EditorUtility.SetDirty(this.myTarget);
+                EditorUtility.SetDirty(myTarget);
             }
         }
 
@@ -81,13 +81,13 @@ namespace HoloToolkit.Unity
             {
                 if (EditorGUILayoutExtensions.Button("Remove"))
                 {
-                    this.myTarget.EditorEvents = RemoveAudioEvent(EditorEvents, this.selectedEventIndex);
+                    myTarget.EditorEvents = RemoveAudioEvent(EditorEvents, selectedEventIndex);
                 }
             }
 
             if (EditorGUILayoutExtensions.Button("Add"))
             {
-                this.myTarget.EditorEvents = AddAudioEvent(EditorEvents);
+                myTarget.EditorEvents = AddAudioEvent(EditorEvents);
             }
 
             EditorGUILayout.EndHorizontal();
@@ -99,7 +99,7 @@ namespace HoloToolkit.Unity
             // Get current event's properties.
             EditorGUILayout.PropertyField(selectedEventProperty.FindPropertyRelative("name"));
 
-            if (selectedEvent.Name != this.eventNames[this.selectedEventIndex])
+            if (selectedEvent.Name != eventNames[selectedEventIndex])
             {
                 UpdateEventNames(EditorEvents);
             }
@@ -114,7 +114,7 @@ namespace HoloToolkit.Unity
             }
 
             // Positioning
-            selectedEvent.Spatialization = (SpatialPositioningType)EditorGUILayout.Popup("Positioning", (int)selectedEvent.Spatialization, this.posTypes);
+            selectedEvent.Spatialization = (SpatialPositioningType)EditorGUILayout.Popup("Positioning", (int)selectedEvent.Spatialization, posTypes);
 
             if (selectedEvent.Spatialization == SpatialPositioningType.SpatialSound)
             {
@@ -127,7 +127,7 @@ namespace HoloToolkit.Unity
             else if (selectedEvent.Spatialization == SpatialPositioningType.ThreeD)
             {
                 //Quick this : needs an update or the serialized object is not saving the threeD value
-                this.serializedObject.Update();
+                serializedObject.Update();
 
                 float curveHeight = 30f;
                 float curveWidth = 300f;
@@ -285,8 +285,8 @@ namespace HoloToolkit.Unity
                     EditorEvents[i].Name = "_" + EditorEvents[i].Name;
                 }
 
-                this.eventNames[i] = EditorEvents[i].Name;
-                previousEventNames.Add(this.eventNames[i]);
+                eventNames[i] = EditorEvents[i].Name;
+                previousEventNames.Add(eventNames[i]);
             }
         }
 
@@ -307,21 +307,21 @@ namespace HoloToolkit.Unity
             tempEvent.Container.sounds = new UAudioClip[0];
             EditorEvents.CopyTo(tempEventArray, 0);
             tempEventArray[EditorEvents.Length] = tempEvent;
-            this.eventNames = new string[tempEventArray.Length];
+            eventNames = new string[tempEventArray.Length];
             UpdateEventNames(tempEventArray);
-            this.selectedEventIndex = this.eventNames.Length - 1;
+            selectedEventIndex = eventNames.Length - 1;
             return tempEventArray;
         }
 
         private TEvent[] RemoveAudioEvent(TEvent[] editorEvents, int eventToRemove)
         {
             editorEvents = RemoveElement(editorEvents, eventToRemove);
-            this.eventNames = new string[editorEvents.Length];
+            eventNames = new string[editorEvents.Length];
             UpdateEventNames(editorEvents);
 
-            if (this.selectedEventIndex >= editorEvents.Length)
+            if (selectedEventIndex >= editorEvents.Length)
             {
-                this.selectedEventIndex--;
+                selectedEventIndex--;
             }
 
             return editorEvents;

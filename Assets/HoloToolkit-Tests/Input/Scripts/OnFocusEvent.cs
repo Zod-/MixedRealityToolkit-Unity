@@ -19,7 +19,7 @@ namespace HoloToolkit.Unity.InputModule.Tests
 
         public void OnFocusEnter()
         {
-            if (this.enabled == false) return;
+            if (!enabled) { return; }
             if (FocusEnterEvent != null)
             {
                 FocusEnterEvent.Invoke();
@@ -28,7 +28,7 @@ namespace HoloToolkit.Unity.InputModule.Tests
 
         public void OnFocusExit()
         {
-            if (this.enabled == false) return;
+            if (!enabled) { return; }
             if (FocusLostEvent != null)
             {
                 FocusLostEvent.Invoke();

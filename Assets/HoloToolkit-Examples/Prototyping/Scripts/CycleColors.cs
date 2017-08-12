@@ -62,7 +62,7 @@ namespace HoloToolkit.Examples.Prototyping
         {
             if(mMaterial != null)
             {
-                GameObject.Destroy(mMaterial);
+                Destroy(mMaterial);
             }
         }
     }

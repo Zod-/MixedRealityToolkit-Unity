@@ -28,39 +28,39 @@ namespace HoloToolkit.Unity
 
         public VolumeBuffer(Int3 size)
         {
-            this.Size = size;
-            this.DataArray = new T[this.Size.sqrMagnitude];
+            Size = size;
+            DataArray = new T[Size.sqrMagnitude];
         }
 
         public VolumeBuffer(Int3 size, T[] ar)
         {
-            this.Size = size;
-            this.DataArray = ar;
+            Size = size;
+            DataArray = ar;
         }
 
         public T this[Int3 pos]
         {
-            get { return this.GetVoxel(pos); }
-            set { this.SetVoxel(pos, value); }
+            get { return GetVoxel(pos); }
+            set { SetVoxel(pos, value); }
         }
 
         public T GetVoxel(Int3 pos)
         {
-            return this.DataArray[MathExtensions.CubicToLinearIndex(pos, this.Size)];
+            return DataArray[MathExtensions.CubicToLinearIndex(pos, Size)];
         }
 
         public void SetVoxel(Int3 pos, T val)
         {
-            this.DataArray[MathExtensions.CubicToLinearIndex(pos, this.Size)] = val;
+            DataArray[MathExtensions.CubicToLinearIndex(pos, Size)] = val;
         }
 
         public void ClearEdges(T clearVal)
         {
             //TODO: there's no need to test - could just explicitly walk the edges
-            for (var i = 0; i < this.Size.sqrMagnitude; ++i)
+            for (var i = 0; i < Size.sqrMagnitude; ++i)
             {
-                var ndx = MathExtensions.LinearToCubicIndex(i, this.Size);
-                if (this.IsEdge(ndx))
+                var ndx = MathExtensions.LinearToCubicIndex(i, Size);
+                if (IsEdge(ndx))
                 {
                     this[ndx] = clearVal;
                 }

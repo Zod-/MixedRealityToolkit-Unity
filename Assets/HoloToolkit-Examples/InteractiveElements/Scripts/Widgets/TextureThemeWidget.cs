@@ -33,7 +33,7 @@ namespace HoloToolkit.Examples.InteractiveElements
             // set the target
             if (Target == null)
             {
-                Target = this.gameObject;
+                Target = gameObject;
             }
 
             // set the renderer

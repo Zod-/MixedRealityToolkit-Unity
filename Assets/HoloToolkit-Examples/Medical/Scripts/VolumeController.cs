@@ -24,7 +24,7 @@ namespace HoloToolkit.Unity
 
         void Update()
         {
-            Shader.SetGlobalMatrix("_WorldToVolume", this.transform.worldToLocalMatrix);
+            Shader.SetGlobalMatrix("_WorldToVolume", transform.worldToLocalMatrix);
 
             Shader.SetGlobalVector("_VolBufferSize", new Vector4(VolumeSize.x, VolumeSize.y, VolumeSize.z));
 
@@ -43,10 +43,10 @@ namespace HoloToolkit.Unity
 
             isSetup = true;
 
-            VolumeSize = this.VolumeInfo.Size;
+            VolumeSize = VolumeInfo.Size;
             VolumeSizePow2 = MathExtensions.PowerOfTwoGreaterThanOrEqualTo(VolumeSize);
 
-            Debug.Log("Volume Controller Configured! " + this.VolumeSizePow2);
+            Debug.Log("Volume Controller Configured! " + VolumeSizePow2);
         }
     }
 }

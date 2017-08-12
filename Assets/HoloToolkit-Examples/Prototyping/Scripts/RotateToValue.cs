@@ -58,7 +58,7 @@ namespace HoloToolkit.Examples.Prototyping
         {
             if (TargetObject == null)
             {
-                TargetObject = this.gameObject;
+                TargetObject = gameObject;
             }
             mStartValue = GetRotation();
         }
@@ -70,7 +70,7 @@ namespace HoloToolkit.Examples.Prototyping
         {
             if (TargetObject == null)
             {
-                TargetObject = this.gameObject;
+                TargetObject = gameObject;
             }
 
             mStartValue = GetRotation();
@@ -85,11 +85,11 @@ namespace HoloToolkit.Examples.Prototyping
         {
             if (ToLocalTransform)
             {
-                this.transform.localRotation = mStartValue;
+                transform.localRotation = mStartValue;
             }
             else
             {
-                this.transform.rotation = mStartValue;
+                transform.rotation = mStartValue;
             }
             IsRunning = false;
             mLerpTimeCounter = 0;
@@ -187,11 +187,11 @@ namespace HoloToolkit.Examples.Prototyping
                 // set the rotation
                 if (ToLocalTransform)
                 {
-                    this.transform.localRotation = GetNewRotation(this.transform.localRotation, percent);
+                    transform.localRotation = GetNewRotation(transform.localRotation, percent);
                 }
                 else
                 {
-                    this.transform.rotation = GetNewRotation(this.transform.rotation, percent);
+                    transform.rotation = GetNewRotation(transform.rotation, percent);
                 }
 
                 // fire the event if complete
@@ -208,13 +208,13 @@ namespace HoloToolkit.Examples.Prototyping
                 // set the rotation
                 if (ToLocalTransform)
                 {
-                    this.transform.localRotation = GetNewRotation(this.transform.localRotation, LerpTime * Time.deltaTime);
-                    IsRunning = this.transform.localRotation != TargetValue;
+                    transform.localRotation = GetNewRotation(transform.localRotation, LerpTime * Time.deltaTime);
+                    IsRunning = transform.localRotation != TargetValue;
                 }
                 else
                 {
-                    this.transform.rotation = GetNewRotation(this.transform.rotation, LerpTime * Time.deltaTime);
-                    IsRunning = this.transform.rotation != TargetValue;
+                    transform.rotation = GetNewRotation(transform.rotation, LerpTime * Time.deltaTime);
+                    IsRunning = transform.rotation != TargetValue;
                 }
 
                 // fire the event if complete

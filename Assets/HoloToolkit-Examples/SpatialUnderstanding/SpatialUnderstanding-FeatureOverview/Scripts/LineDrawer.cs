@@ -130,12 +130,12 @@ namespace HoloToolkit.Examples.SpatialUnderstandingFeatureOverview
                 // Calc the forward distance for the animation start point
                 Vector3 rayPos = Camera.main.transform.position;
                 Vector3 rayVec = Camera.main.transform.forward * InitialPositionForwardMaxDistance;
-                IntPtr raycastResultPtr = HoloToolkit.Unity.SpatialUnderstanding.Instance.UnderstandingDLL.GetStaticRaycastResultPtr();
-                HoloToolkit.Unity.SpatialUnderstandingDll.Imports.PlayspaceRaycast(
+                IntPtr raycastResultPtr = SpatialUnderstanding.Instance.UnderstandingDLL.GetStaticRaycastResultPtr();
+                SpatialUnderstandingDll.Imports.PlayspaceRaycast(
                     rayPos.x, rayPos.y, rayPos.z, rayVec.x, rayVec.y, rayVec.z,
                     raycastResultPtr);
-                SpatialUnderstandingDll.Imports.RaycastResult rayCastResult = HoloToolkit.Unity.SpatialUnderstanding.Instance.UnderstandingDLL.GetStaticRaycastResult();
-                Vector3 animOrigin = (rayCastResult.SurfaceType != HoloToolkit.Unity.SpatialUnderstandingDll.Imports.RaycastResult.SurfaceTypes.Invalid) ?
+                SpatialUnderstandingDll.Imports.RaycastResult rayCastResult = SpatialUnderstanding.Instance.UnderstandingDLL.GetStaticRaycastResult();
+                Vector3 animOrigin = (rayCastResult.SurfaceType != SpatialUnderstandingDll.Imports.RaycastResult.SurfaceTypes.Invalid) ?
                     rayPos + rayVec.normalized * Mathf.Max((rayCastResult.IntersectPoint - rayPos).magnitude - 0.3f, 0.0f) :
                     rayPos + rayVec * InitialPositionForwardMaxDistance;
 
@@ -160,7 +160,7 @@ namespace HoloToolkit.Examples.SpatialUnderstandingFeatureOverview
 
                 IsAnimationSetup = true;
             }
-            public bool IsAnimationComplete { get { return IsAnimationSetup && (Time >= (AnimatedBox.AnimationTime + TimeDelay)); } }
+            public bool IsAnimationComplete { get { return IsAnimationSetup && (Time >= (AnimationTime + TimeDelay)); } }
 
             public Vector3 Center;
             public Quaternion Rotation;

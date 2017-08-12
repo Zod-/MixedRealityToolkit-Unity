@@ -278,7 +278,7 @@ namespace HoloToolkit.Examples.SpatialUnderstandingFeatureOverview
             ParentCanvas.gameObject.SetActive(true);
 
             // Create up a box
-            MenuAnimatedBox = new AnimatedBox(0.0f, position, rotation, new Color(1.0f, 1.0f, 1.0f, 0.25f), new Vector3(MenuWidth * 0.5f, MenuHeight * 0.5f, 0.025f), LineDrawer.DefaultLineWidth * 0.5f);
+            MenuAnimatedBox = new AnimatedBox(0.0f, position, rotation, new Color(1.0f, 1.0f, 1.0f, 0.25f), new Vector3(MenuWidth * 0.5f, MenuHeight * 0.5f, 0.025f), DefaultLineWidth * 0.5f);
 
             // Initial position
             transform.position = MenuAnimatedBox.AnimPosition.Evaluate(MenuAnimatedBox.Time);

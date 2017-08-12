@@ -19,12 +19,12 @@ namespace HoloToolkit.Unity
 
         public void SetPlacing(bool placing)
         {
-            this.Placing = placing;
+            Placing = placing;
         }
 
         private void OnEnable()
         {
-            this.initialRotation = this.transform.rotation;
+            initialRotation = transform.rotation;
         }
 
         void Update()
@@ -35,13 +35,13 @@ namespace HoloToolkit.Unity
                 var forward = Camera.main.transform.forward;
                 var scenePosition = headPosition + DistanceFromHead * forward;
 
-                var facingRotation = Camera.main.transform.localRotation * this.initialRotation;
+                var facingRotation = Camera.main.transform.localRotation * initialRotation;
                 //only yaw
                 facingRotation.x = 0;
                 facingRotation.z = 0;
 
-                this.transform.position = scenePosition;
-                this.transform.rotation = facingRotation;
+                transform.position = scenePosition;
+                transform.rotation = facingRotation;
             }
 
             if (Input.GetMouseButtonDown(0))

@@ -102,8 +102,8 @@ namespace HoloToolkit.Unity
             protected override WebRequest GetWebRequest(Uri uri)
             {
                 WebRequest lWebRequest = base.GetWebRequest(uri);
-                lWebRequest.Timeout = BuildDeployPortal.TimeoutMS;
-                ((HttpWebRequest)lWebRequest).ReadWriteTimeout = BuildDeployPortal.TimeoutMS;
+                lWebRequest.Timeout = TimeoutMS;
+                ((HttpWebRequest)lWebRequest).ReadWriteTimeout = TimeoutMS;
                 return lWebRequest;
             }
         }
@@ -277,7 +277,7 @@ namespace HoloToolkit.Unity
                     System.Threading.Thread.Sleep(1000);
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 Debug.LogError(ex.ToString());
                 return false;
@@ -313,7 +313,7 @@ namespace HoloToolkit.Unity
                     httpResponse.Close();
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 Debug.LogError(ex.ToString());
                 return false;
@@ -380,7 +380,7 @@ namespace HoloToolkit.Unity
                     httpResponse.Close();
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 Debug.LogError(ex.ToString());
                 return false;
@@ -431,14 +431,14 @@ namespace HoloToolkit.Unity
         // Helpers
         static string EncodeTo64(string toEncode)
         {
-            byte[] toEncodeAsBytes = System.Text.ASCIIEncoding.ASCII.GetBytes(toEncode);
-            string returnValue = System.Convert.ToBase64String(toEncodeAsBytes);
+            byte[] toEncodeAsBytes = System.Text.Encoding.ASCII.GetBytes(toEncode);
+            string returnValue = Convert.ToBase64String(toEncodeAsBytes);
             return returnValue;
         }
         static string DecodeFrom64(string encodedData)
         {
-            byte[] encodedDataAsBytes = System.Convert.FromBase64String(encodedData);
-            string returnValue = System.Text.ASCIIEncoding.ASCII.GetString(encodedDataAsBytes);
+            byte[] encodedDataAsBytes = Convert.FromBase64String(encodedData);
+            string returnValue = System.Text.Encoding.ASCII.GetString(encodedDataAsBytes);
             return returnValue;
         }
     }

@@ -38,17 +38,17 @@ namespace HoloToolkit.Unity
             //force initial material setting in case user has made strange editor changes
             wasThickSliceEnabled = !ThickSliceEnabled;
 
-            InputManager.Instance.AddGlobalListener(this.gameObject);
+            InputManager.Instance.AddGlobalListener(gameObject);
         }
 
         private void OnDisable()
         {
-            InputManager.Instance.RemoveGlobalListener(this.gameObject);
+            InputManager.Instance.RemoveGlobalListener(gameObject);
         }
 
         public void SetThickSliceEnabled(bool on)
         {
-            this.ThickSliceEnabled = on;
+            ThickSliceEnabled = on;
         }
 
         private void Update()
@@ -57,8 +57,8 @@ namespace HoloToolkit.Unity
 
             Vector4 planeEquation;
 
-            var forward = this.transform.forward;
-            var pos = this.transform.position;
+            var forward = transform.forward;
+            var pos = transform.position;
 
             planeEquation.x = forward.x;
             planeEquation.y = forward.y;
@@ -71,7 +71,7 @@ namespace HoloToolkit.Unity
 
             Shader.SetGlobalVector("CutPlane", planeEquation);
 
-            var cornerPos = this.transform.localPosition;
+            var cornerPos = transform.localPosition;
             var slabMin = new Vector4(cornerPos.x - 0.5f, cornerPos.y - 0.5f, cornerPos.z - 0.5f, 0.0f);
             var slabMax = new Vector4(cornerPos.x + 0.5f, cornerPos.y + 0.5f, cornerPos.z + 0.5f, 0.0f);
 
@@ -84,25 +84,25 @@ namespace HoloToolkit.Unity
                 wasThickSliceEnabled = ThickSliceEnabled;
             }
 
-            Shader.SetGlobalMatrix("_SlicingWorldToLocal", this.transform.worldToLocalMatrix);
+            Shader.SetGlobalMatrix("_SlicingWorldToLocal", transform.worldToLocalMatrix);
         }
 
         void HandleDebugKeys()
         {
             float movementDelta = KeyboardMovementSpeed * Time.deltaTime;
 
-            var positionDeltaX = this.transform.localRotation * new Vector3(movementDelta, 0.0f, 0.0f);
-            var positionDeltaY = this.transform.localRotation * new Vector3(0.0f, movementDelta, 0.0f);
-            var positionDeltaZ = this.transform.localRotation * new Vector3(0.0f, 0.0f, movementDelta);
+            var positionDeltaX = transform.localRotation * new Vector3(movementDelta, 0.0f, 0.0f);
+            var positionDeltaY = transform.localRotation * new Vector3(0.0f, movementDelta, 0.0f);
+            var positionDeltaZ = transform.localRotation * new Vector3(0.0f, 0.0f, movementDelta);
 
-            if (Input.GetKey(KeyCode.L)) { this.transform.localPosition += positionDeltaX; }
-            if (Input.GetKey(KeyCode.J)) { this.transform.localPosition -= positionDeltaX; }
+            if (Input.GetKey(KeyCode.L)) { transform.localPosition += positionDeltaX; }
+            if (Input.GetKey(KeyCode.J)) { transform.localPosition -= positionDeltaX; }
 
-            if (Input.GetKey(KeyCode.I)) { this.transform.localPosition += positionDeltaY; }
-            if (Input.GetKey(KeyCode.K)) { this.transform.localPosition -= positionDeltaY; }
+            if (Input.GetKey(KeyCode.I)) { transform.localPosition += positionDeltaY; }
+            if (Input.GetKey(KeyCode.K)) { transform.localPosition -= positionDeltaY; }
 
-            if (Input.GetKey(KeyCode.RightBracket)) { this.transform.localPosition += positionDeltaZ; }
-            if (Input.GetKey(KeyCode.LeftBracket)) { this.transform.localPosition -= positionDeltaZ; }
+            if (Input.GetKey(KeyCode.RightBracket)) { transform.localPosition += positionDeltaZ; }
+            if (Input.GetKey(KeyCode.LeftBracket)) { transform.localPosition -= positionDeltaZ; }
         }
         public void OnManipulationStarted(ManipulationEventData eventData)
         {
@@ -113,7 +113,7 @@ namespace HoloToolkit.Unity
             float movementDelta = GestureMovementSpeed * Time.deltaTime;
 
             //TODO: consider tether filter
-            this.transform.localPosition += this.transform.localRotation * eventData.CumulativeDelta * movementDelta;
+            transform.localPosition += transform.localRotation * eventData.CumulativeDelta * movementDelta;
         }
 
         public void OnManipulationCompleted(ManipulationEventData eventData)

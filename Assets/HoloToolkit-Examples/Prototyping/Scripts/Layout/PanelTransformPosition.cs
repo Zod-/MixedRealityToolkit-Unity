@@ -47,7 +47,7 @@ namespace HoloToolkit.Examples.Prototyping
         {
             if (Anchor == null)
             {
-                Anchor = this.transform;
+                Anchor = transform;
             }
         }
 

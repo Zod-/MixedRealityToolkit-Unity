@@ -13,10 +13,10 @@ namespace HoloToolkit.Unity.InputModule.Tests
 
             if (inputManager != null)
             {
-                inputManager.OverrideFocusedObject = this.gameObject;
+                inputManager.OverrideFocusedObject = gameObject;
             }
 
-            textMesh = GameObject.FindObjectOfType<TextMesh>();
+            textMesh = FindObjectOfType<TextMesh>();
         }
 
         public void OnInputClicked(InputClickedEventData eventData)

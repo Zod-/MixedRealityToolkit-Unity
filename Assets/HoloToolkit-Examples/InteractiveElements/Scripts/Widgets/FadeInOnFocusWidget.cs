@@ -11,10 +11,10 @@ namespace HoloToolkit.Examples.InteractiveElements
     /// <summary>
     /// An InteractiveWidget for fading in elements based on Interactive focus state
     /// </summary>
-    [RequireComponent(typeof(Prototyping.FadeColors))]
+    [RequireComponent(typeof(FadeColors))]
     public class FadeInOnFocusWidget : InteractiveWidget
     {
-        private Prototyping.FadeColors mFadeController;
+        private FadeColors mFadeController;
 
         /// <summary>
         /// Set the Fade Controller
@@ -23,7 +23,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         {
             if (mFadeController == null)
             {
-                mFadeController = GetComponent<Prototyping.FadeColors>();
+                mFadeController = GetComponent<FadeColors>();
             }
 
             if (mFadeController == null)

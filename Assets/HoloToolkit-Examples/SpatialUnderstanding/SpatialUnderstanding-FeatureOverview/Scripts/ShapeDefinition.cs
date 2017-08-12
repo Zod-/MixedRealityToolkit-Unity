@@ -76,8 +76,8 @@ namespace HoloToolkit.Examples.SpatialUnderstandingFeatureOverview
             {
                 return false;
             }
-            IntPtr shapeComponentsPtr = (shapeComponents == null) ? IntPtr.Zero : HoloToolkit.Unity.SpatialUnderstanding.Instance.UnderstandingDLL.PinObject(shapeComponents.ToArray());
-            IntPtr shapeConstraintsPtr = (shapeConstraints == null) ? IntPtr.Zero : HoloToolkit.Unity.SpatialUnderstanding.Instance.UnderstandingDLL.PinObject(shapeConstraints.ToArray());
+            IntPtr shapeComponentsPtr = (shapeComponents == null) ? IntPtr.Zero : SpatialUnderstanding.Instance.UnderstandingDLL.PinObject(shapeComponents.ToArray());
+            IntPtr shapeConstraintsPtr = (shapeConstraints == null) ? IntPtr.Zero : SpatialUnderstanding.Instance.UnderstandingDLL.PinObject(shapeConstraints.ToArray());
             if (SpatialUnderstandingDllShapes.AddShape(
                     shapeName,
                     (shapeComponents == null) ? 0 : shapeComponents.Count,

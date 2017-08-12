@@ -46,7 +46,7 @@ namespace HoloToolkit.Examples.Prototyping
             // set the tartget game object if not set already
             if (TargetObject == null)
             {
-                TargetObject = this.gameObject;
+                TargetObject = gameObject;
             }
 
             // get the material array

@@ -63,7 +63,7 @@ namespace HoloToolkit.Unity
 
         public static Texture3D BuildTexture(byte[] data, Int3 volumeSize, Int3 volumeSizePow2)
         {
-            var colorData = VolumeTextureUtils.ByteArrayToColor32Array(data, volumeSize, volumeSizePow2);
+            var colorData = ByteArrayToColor32Array(data, volumeSize, volumeSizePow2);
 
             var tex = new Texture3D(volumeSizePow2.x, volumeSizePow2.y, volumeSizePow2.z, TextureFormat.RGBA4444, false);
             tex.filterMode = FilterMode.Bilinear;

@@ -96,7 +96,7 @@ namespace HoloToolkit.Examples.Prototyping
             if (ReferenceObject == null)
                 ReferenceObject = Camera.main.gameObject;
 
-            mOffsetDirection = this.transform.position - ReferenceObject.transform.position;
+            mOffsetDirection = transform.position - ReferenceObject.transform.position;
             mOffsetDistance = mOffsetDirection.magnitude;
             mDirection = ReferenceObject.transform.forward.normalized;
             mNormalzedOffsetDirection = mOffsetDirection.normalized;
@@ -133,20 +133,20 @@ namespace HoloToolkit.Examples.Prototyping
         protected virtual void UpdatePosition(Vector3 position, float time)
         {
             // update the position
-            this.transform.position = Vector3.Lerp(this.transform.position, position, LerpPositionSpeed * time);
+            transform.position = Vector3.Lerp(transform.position, position, LerpPositionSpeed * time);
 
             // rotate to face the reference object
             if (FaceObject)
             {
-                Quaternion forwardRotation = Quaternion.LookRotation(this.transform.position - ReferenceObject.transform.position);
-                this.transform.rotation = Quaternion.Lerp(this.transform.rotation, forwardRotation, LerpRotationSpeed * time);
+                Quaternion forwardRotation = Quaternion.LookRotation(transform.position - ReferenceObject.transform.position);
+                transform.rotation = Quaternion.Lerp(transform.rotation, forwardRotation, LerpRotationSpeed * time);
             }
 
             // lock the x axis
             if (KeepUpRight)
             {
-                Quaternion upRotation = Quaternion.FromToRotation(this.transform.up, Vector3.up);
-                this.transform.rotation = upRotation * this.transform.rotation;
+                Quaternion upRotation = Quaternion.FromToRotation(transform.up, Vector3.up);
+                transform.rotation = upRotation * transform.rotation;
             }
 
         }

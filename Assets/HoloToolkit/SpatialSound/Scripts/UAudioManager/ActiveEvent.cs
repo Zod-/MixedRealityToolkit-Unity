@@ -186,7 +186,7 @@ namespace HoloToolkit.Unity
             if (audioEvent.FadeInTime > 0)
             {
                 forEachSource((source) => source.volume = 0f);
-                this.currentFade = audioEvent.FadeInTime;
+                currentFade = audioEvent.FadeInTime;
                 if (audioEvent.VolumeRandomization != 0)
                 {
                     vol = UnityEngine.Random.Range(audioEvent.VolumeCenter - audioEvent.VolumeRandomization, audioEvent.VolumeCenter + audioEvent.VolumeRandomization);
@@ -195,7 +195,7 @@ namespace HoloToolkit.Unity
                 {
                     vol = audioEvent.VolumeCenter;
                 }
-                this.volDest = vol;
+                volDest = vol;
             }
             else
             {
@@ -230,21 +230,21 @@ namespace HoloToolkit.Unity
                 return;
             }
 
-            this.PrimarySource.pitch = newPitch;
+            PrimarySource.pitch = newPitch;
         }
 
         public void Dispose()
         {
-            if (this.primarySource != null)
+            if (primarySource != null)
             {
-                this.primarySource.enabled = false;
-                this.primarySource = null;
+                primarySource.enabled = false;
+                primarySource = null;
             }
 
-            if (this.secondarySource != null)
+            if (secondarySource != null)
             {
-                this.secondarySource.enabled = false;
-                this.secondarySource = null;
+                secondarySource.enabled = false;
+                secondarySource = null;
             }
         }
 

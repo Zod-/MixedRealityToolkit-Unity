@@ -10,14 +10,14 @@ namespace HoloToolkit.Unity
     {
         private void OnEnable()
         {
-            this.myTarget = (UAudioManager)target;
+            myTarget = (UAudioManager)target;
             SetUpEditor();
         }
 
         public override void OnInspectorGUI()
         {
-            EditorGUILayout.PropertyField(this.serializedObject.FindProperty("globalEventInstanceLimit"));
-            EditorGUILayout.PropertyField(this.serializedObject.FindProperty("globalInstanceBehavior"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("globalEventInstanceLimit"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("globalInstanceBehavior"));
             DrawInspectorGUI(false);
         }
     }

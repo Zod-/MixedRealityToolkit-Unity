@@ -65,11 +65,11 @@ namespace HoloToolkit.Unity
 
             if (PointerPrefab == null)
             {
-                this.gameObject.SetActive(false);
+                gameObject.SetActive(false);
                 return;
             }
 
-            pointer = GameObject.Instantiate(PointerPrefab);
+            pointer = Instantiate(PointerPrefab);
 
             // We create the effect of pivoting rotations by parenting the pointer and
             // offsetting its position.
@@ -100,7 +100,7 @@ namespace HoloToolkit.Unity
             }
             else
             {
-                int currentFrameCount = UnityEngine.Time.frameCount;
+                int currentFrameCount = Time.frameCount;
                 if (currentFrameCount != frustumLastUpdated)
                 {
                     // Collect the updated camera information for the current frame
@@ -316,7 +316,7 @@ namespace HoloToolkit.Unity
                 }
             }
 
-            this.transform.position = indicatorPosition;
+            transform.position = indicatorPosition;
 
             // The pointer's direction should always appear pointing away from the user's center
             // of view. Thus we find the center point of the user's view in world space.
@@ -332,7 +332,7 @@ namespace HoloToolkit.Unity
             Vector3 pointerDirection = (indicatorPosition - indicatorFieldCenter).normalized;
 
             // allign this object's up vector with the pointerDirection
-            this.transform.rotation = Quaternion.LookRotation(cameraForward, pointerDirection);
+            transform.rotation = Quaternion.LookRotation(cameraForward, pointerDirection);
         }
 
         // Here we adjust the Camera's frustum planes to place the cursor in a smaller

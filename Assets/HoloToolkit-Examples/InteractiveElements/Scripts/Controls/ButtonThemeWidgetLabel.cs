@@ -41,7 +41,7 @@ namespace HoloToolkit.Examples.InteractiveElements
                 MovePosition = GetComponent<MoveToPosition>();
             }
 
-            mText = this.gameObject.GetComponent<TextMesh>();
+            mText = gameObject.GetComponent<TextMesh>();
         }
 
         private void Start()

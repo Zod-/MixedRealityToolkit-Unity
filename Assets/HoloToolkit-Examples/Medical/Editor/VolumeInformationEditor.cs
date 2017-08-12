@@ -16,7 +16,7 @@ namespace HoloToolkit.Unity
     {
         public override void OnInspectorGUI()
         {
-            var volInfo = this.target as VolumeInformation;
+            var volInfo = target as VolumeInformation;
 
             base.OnInspectorGUI();
             

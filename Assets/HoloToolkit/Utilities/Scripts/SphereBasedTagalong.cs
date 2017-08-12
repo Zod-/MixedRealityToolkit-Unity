@@ -32,14 +32,14 @@ namespace HoloToolkit.Unity
 
         void Start()
         {
-            initialDistanceToCamera = Vector3.Distance(this.transform.position, Camera.main.transform.position);
+            initialDistanceToCamera = Vector3.Distance(transform.position, Camera.main.transform.position);
         }
 
         void Update()
         {
             optimalPosition = Camera.main.transform.position + Camera.main.transform.forward * initialDistanceToCamera;
 
-            Vector3 offsetDir = this.transform.position - optimalPosition;
+            Vector3 offsetDir = transform.position - optimalPosition;
             if (offsetDir.magnitude > SphereRadius)
             {
                 targetPosition = optimalPosition + offsetDir.normalized * SphereRadius;
@@ -48,7 +48,7 @@ namespace HoloToolkit.Unity
                     ? Time.unscaledDeltaTime
                     : Time.deltaTime;
 
-                this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, MoveSpeed * deltaTime);
+                transform.position = Vector3.Lerp(transform.position, targetPosition, MoveSpeed * deltaTime);
             }
         }
 

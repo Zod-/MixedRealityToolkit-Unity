@@ -63,7 +63,7 @@ namespace HoloToolkit.Examples.Prototyping
         {
             if (TargetObject == null)
             {
-                TargetObject = this.gameObject;
+                TargetObject = gameObject;
             }
 
             Renderer renderer = GetComponent<Renderer>();

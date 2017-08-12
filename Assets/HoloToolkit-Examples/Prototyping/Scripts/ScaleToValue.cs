@@ -55,7 +55,7 @@ namespace HoloToolkit.Examples.Prototyping
         {
             if (TargetObject == null)
             {
-                TargetObject = this.gameObject;
+                TargetObject = gameObject;
             }
             mStartValue = GetScale();
         }
@@ -67,7 +67,7 @@ namespace HoloToolkit.Examples.Prototyping
         {
             if (TargetObject == null)
             {
-                TargetObject = this.gameObject;
+                TargetObject = gameObject;
             }
 
             mStartValue = GetScale();
@@ -80,7 +80,7 @@ namespace HoloToolkit.Examples.Prototyping
         /// </summary>
         public void ResetTransform()
         {
-            this.transform.localScale = mStartValue;
+            transform.localScale = mStartValue;
             IsRunning = false;
             mLerpTimeCounter = 0;
         }
@@ -177,7 +177,7 @@ namespace HoloToolkit.Examples.Prototyping
                 float percent = mLerpTimeCounter / LerpTime;
 
                 // set the scale
-                this.transform.localScale = GetNewScale(this.transform.localScale, percent);
+                transform.localScale = GetNewScale(transform.localScale, percent);
 
                 // fire the event if complete
                 if (percent >= 1)
@@ -191,8 +191,8 @@ namespace HoloToolkit.Examples.Prototyping
                 bool wasRunning = IsRunning;
 
                 // set the scale
-                this.transform.localScale = GetNewScale(this.transform.localScale, LerpTime * Time.deltaTime);
-                IsRunning = this.transform.localScale != TargetValue;
+                transform.localScale = GetNewScale(transform.localScale, LerpTime * Time.deltaTime);
+                IsRunning = transform.localScale != TargetValue;
 
                 // fire the event if complete
                 if (IsRunning != wasRunning && !IsRunning)

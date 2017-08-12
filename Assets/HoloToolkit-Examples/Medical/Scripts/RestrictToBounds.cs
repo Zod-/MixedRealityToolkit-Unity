@@ -16,7 +16,7 @@ namespace HoloToolkit.Unity
 
         void Update()
         {
-            this.transform.localPosition = MathExtensions.ClampComponentwise(this.transform.localPosition, this.Min, this.Max);
+            transform.localPosition = MathExtensions.ClampComponentwise(transform.localPosition, Min, Max);
         }
     }
 }

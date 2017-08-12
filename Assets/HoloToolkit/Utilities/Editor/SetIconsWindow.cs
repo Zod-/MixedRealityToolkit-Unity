@@ -98,8 +98,8 @@ namespace HoloToolkit.Unity
 
         private void Setup()
         {
-            this.titleContent = new GUIContent(WindowTitle);
-            this.minSize = new Vector2(600, 200);
+            titleContent = new GUIContent(WindowTitle);
+            minSize = new Vector2(600, 200);
 
             // Load settings
             _originalAppIconPath = EditorPrefs.GetString(EditorPrefsKey_AppIcon);

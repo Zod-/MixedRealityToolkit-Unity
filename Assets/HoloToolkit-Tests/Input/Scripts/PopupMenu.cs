@@ -30,7 +30,7 @@ namespace HoloToolkit.Unity.InputModule.Tests
         {
             get
             {
-                return this.gameObject;
+                return gameObject;
             }
         }
 
@@ -77,9 +77,9 @@ namespace HoloToolkit.Unity.InputModule.Tests
             }
 
             // the visual was activated via an interaction outside of the menu, let anyone who cares know
-            if (this.activatedCallback != null)
+            if (activatedCallback != null)
             {
-                this.activatedCallback();
+                activatedCallback();
             }
         }
 

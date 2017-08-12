@@ -25,7 +25,7 @@ namespace HoloToolkit.Examples.Prototyping
         {
             if(CycleHost == null)
             {
-                CycleHost = this.gameObject;
+                CycleHost = gameObject;
                 Debug.Log("CycleHost was set to self by default");
             }
 
@@ -34,7 +34,7 @@ namespace HoloToolkit.Examples.Prototyping
 
             if (mTextMesh == null && mText == null)
             {
-               Debug.LogError("There are no Text Components on this <GameObject:" + this.gameObject.name + ">");
+               Debug.LogError("There are no Text Components on this <GameObject:" + gameObject.name + ">");
             }
 
             mCycleHost = CycleHost.GetComponent<ICycle>();

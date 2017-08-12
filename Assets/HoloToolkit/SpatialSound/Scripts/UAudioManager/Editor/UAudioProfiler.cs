@@ -43,9 +43,9 @@ namespace HoloToolkit.Unity
 
             ProfilerEvent[] currentEvents = new ProfilerEvent[0];
 
-            if (this.eventTimeline == null)
+            if (eventTimeline == null)
             {
-                this.eventTimeline = new List<ProfilerEvent[]>();
+                eventTimeline = new List<ProfilerEvent[]>();
             }
 
             if (UAudioManager.Instance != null && !EditorApplication.isPaused)
@@ -80,14 +80,14 @@ namespace HoloToolkit.Unity
 
                 currentEvents[i] = tempEvent;
             }
-            this.eventTimeline.Add(currentEvents);
+            eventTimeline.Add(currentEvents);
 
             // Trim the first event if we have exceeded the maximum stored frames.
-            if (this.eventTimeline.Count > MaxFrames)
+            if (eventTimeline.Count > MaxFrames)
             {
-                this.eventTimeline.RemoveAt(0);
+                eventTimeline.RemoveAt(0);
             }
-            this.currentFrame = this.eventTimeline.Count - 1;
+            currentFrame = eventTimeline.Count - 1;
         }
 
         // Draw the profiler window.
@@ -102,14 +102,14 @@ namespace HoloToolkit.Unity
             //Fix null reference exception when launching with profiler is open
             if(eventTimeline!=null)
             {
-                this.currentFrame = EditorGUILayout.IntSlider(this.currentFrame, 0, this.eventTimeline.Count - 1);
+                currentFrame = EditorGUILayout.IntSlider(currentFrame, 0, eventTimeline.Count - 1);
                 scrollOffset = EditorGUILayout.BeginScrollView(scrollOffset);
 
-                if (this.eventTimeline.Count > this.currentFrame)
+                if (eventTimeline.Count > currentFrame)
                 {
-                    for (int i = 0; i < this.eventTimeline[this.currentFrame].Length; i++)
+                    for (int i = 0; i < eventTimeline[currentFrame].Length; i++)
                     {
-                        DrawEventButton(this.eventTimeline[this.currentFrame][i], i);
+                        DrawEventButton(eventTimeline[currentFrame][i], i);
                     }
                 }
 

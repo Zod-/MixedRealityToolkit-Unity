@@ -19,7 +19,7 @@ namespace HoloToolkit.Examples.InteractiveElements
 
         private void Start()
         {
-            mRenderer = this.gameObject.GetComponent<Renderer>();
+            mRenderer = gameObject.GetComponent<Renderer>();
         }
         /// <summary>
         /// Interactive calls this method on state change
@@ -41,41 +41,41 @@ namespace HoloToolkit.Examples.InteractiveElements
             switch (state)
             {
                 case Interactive.ButtonStateEnum.Default:
-                    this.gameObject.transform.localScale = EffectScale[0];
-                    this.gameObject.transform.localPosition = EffectPosition[0];
+                    gameObject.transform.localScale = EffectScale[0];
+                    gameObject.transform.localPosition = EffectPosition[0];
                     colorIndex = 0;
                     break;
                 case Interactive.ButtonStateEnum.Focus:
-                    this.gameObject.transform.localScale = EffectScale[1];
-                    this.gameObject.transform.localPosition = EffectPosition[0];
+                    gameObject.transform.localScale = EffectScale[1];
+                    gameObject.transform.localPosition = EffectPosition[0];
                     colorIndex = 0;
                     break;
                 case Interactive.ButtonStateEnum.Press:
-                    this.gameObject.transform.localPosition = EffectPosition[1];
+                    gameObject.transform.localPosition = EffectPosition[1];
                     colorIndex = 0;
                     break;
                 case Interactive.ButtonStateEnum.Selected:
-                    this.gameObject.transform.localScale = EffectScale[0];
-                    this.gameObject.transform.localPosition = EffectPosition[0];
+                    gameObject.transform.localScale = EffectScale[0];
+                    gameObject.transform.localPosition = EffectPosition[0];
                     colorIndex = 1;
                     break;
                 case Interactive.ButtonStateEnum.FocusSelected:
-                    this.gameObject.transform.localScale = EffectScale[1];
-                    this.gameObject.transform.localPosition = EffectPosition[0];
+                    gameObject.transform.localScale = EffectScale[1];
+                    gameObject.transform.localPosition = EffectPosition[0];
                     colorIndex = 1;
                     break;
                 case Interactive.ButtonStateEnum.PressSelected:
-                    this.gameObject.transform.localPosition = EffectPosition[1];
+                    gameObject.transform.localPosition = EffectPosition[1];
                     colorIndex = 1;
                     break;
                 case Interactive.ButtonStateEnum.Disabled:
-                    this.gameObject.transform.localScale = EffectScale[0];
-                    this.gameObject.transform.localPosition = EffectPosition[0];
+                    gameObject.transform.localScale = EffectScale[0];
+                    gameObject.transform.localPosition = EffectPosition[0];
                     colorIndex = 0;
                     break;
                 case Interactive.ButtonStateEnum.DisabledSelected:
-                    this.gameObject.transform.localScale = EffectScale[0];
-                    this.gameObject.transform.localPosition = EffectPosition[0];
+                    gameObject.transform.localScale = EffectScale[0];
+                    gameObject.transform.localPosition = EffectPosition[0];
                     colorIndex = 1;
                     break;
                 default:

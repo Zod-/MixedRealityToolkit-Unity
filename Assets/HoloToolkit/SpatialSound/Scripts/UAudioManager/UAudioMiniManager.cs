@@ -17,7 +17,7 @@ namespace HoloToolkit.Unity
         {
             for (int i = 0; i < events.Length; i++)
             {
-                PlayEvent(this.events[i]);
+                PlayEvent(events[i]);
             }
         }
 
@@ -70,7 +70,7 @@ namespace HoloToolkit.Unity
                 return;
             }
 
-            for (int i = 0; i < this.events.Length; i++)
+            for (int i = 0; i < events.Length; i++)
             {
                 events[i].primarySource.pitch = newPitch;
             }

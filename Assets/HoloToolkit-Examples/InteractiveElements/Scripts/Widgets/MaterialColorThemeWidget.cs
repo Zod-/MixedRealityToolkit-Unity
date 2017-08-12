@@ -76,7 +76,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         {
             if (mMaterial != null)
             {
-                GameObject.Destroy(mMaterial);
+                Destroy(mMaterial);
             }
         }
     }

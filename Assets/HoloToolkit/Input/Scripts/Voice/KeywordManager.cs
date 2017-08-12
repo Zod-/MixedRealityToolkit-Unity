@@ -25,7 +25,7 @@ namespace HoloToolkit.Unity.InputModule
     [Obsolete("Use HoloToolkit.Unity.InputModule.SpeechInputSource")]
     public partial class KeywordManager : MonoBehaviour
     {
-        [System.Serializable]
+        [Serializable]
         public struct KeywordAndResponse
         {
             [Tooltip("The keyword to recognize.")]

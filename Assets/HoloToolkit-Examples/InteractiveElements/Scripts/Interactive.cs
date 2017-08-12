@@ -109,7 +109,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         {
             if (ParentObject == null)
             {
-                ParentObject = this.gameObject;
+                ParentObject = gameObject;
             }
 
             CollectWidgets(forceCollection: true);

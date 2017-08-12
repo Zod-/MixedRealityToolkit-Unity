@@ -20,7 +20,7 @@ namespace HoloToolkit.Examples.InteractiveElements
         {
             if (Targets.Length == 0)
             {
-                Targets = new GameObject[1] { this.gameObject };
+                Targets = new GameObject[1] { gameObject };
                 SelfHosted = true;
             }
         }

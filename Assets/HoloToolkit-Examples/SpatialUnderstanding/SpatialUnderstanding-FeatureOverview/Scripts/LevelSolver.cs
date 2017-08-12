@@ -67,7 +67,7 @@ namespace HoloToolkit.Examples.SpatialUnderstandingFeatureOverview
                 Result = result;
             }
 
-            public LineDrawer.AnimatedBox Box;
+            public AnimatedBox Box;
             public SpatialUnderstandingDllObjectPlacement.ObjectPlacementResult Result;
         }
 

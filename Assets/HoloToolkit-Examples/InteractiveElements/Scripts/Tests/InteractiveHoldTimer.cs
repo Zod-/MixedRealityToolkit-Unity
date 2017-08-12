@@ -15,14 +15,14 @@ namespace HoloToolkit.Examples.InteractiveElements
         private Vector3 mStartScale;
         private void Start()
         {
-            mStartScale = this.gameObject.transform.localScale;
+            mStartScale = gameObject.transform.localScale;
         }
 
         // Update is called once per frame
         private void Update()
         {
             mStartScale.x = Button.GetHoldPercentage();
-            this.gameObject.transform.localScale = mStartScale;
+            gameObject.transform.localScale = mStartScale;
         }
     }
 }
