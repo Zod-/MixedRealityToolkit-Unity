@@ -2,10 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using UnityEngine.VR.WSA;
 using System;
 using HoloToolkit.Unity;
 
