@@ -3,6 +3,7 @@
 
 using UnityEngine;
 using HoloToolkit.Examples.Prototyping;
+using System;
 
 namespace HoloToolkit.Examples.InteractiveElements
 {
@@ -18,6 +19,8 @@ namespace HoloToolkit.Examples.InteractiveElements
         public MoveToPosition MovePositionTweener;
 
         private Vector3InteractiveTheme mPositionTheme;
+
+        private string mCheckThemeTag = "";
 
         /// <summary>
         /// Get Move to Position
@@ -35,7 +38,18 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// </summary>
         private void Start()
         {
+            if (mPositionTheme == null)
+            {
+                SetTheme();
+            }
+
+            RefreshIfNeeded();
+        }
+
+        public override void SetTheme()
+        {
             mPositionTheme = GetVector3Theme(ThemeTag);
+            mCheckThemeTag = ThemeTag;
         }
 
         /// <summary>
@@ -57,6 +71,15 @@ namespace HoloToolkit.Examples.InteractiveElements
                 {
                     transform.localPosition = mPositionTheme.GetThemeValue(state);
                 }
+            }
+        }
+
+        private void Update()
+        {
+            if (!mCheckThemeTag.Equals(ThemeTag))
+            {
+                SetTheme();
+                RefreshIfNeeded();
             }
         }
     }

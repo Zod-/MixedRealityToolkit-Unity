@@ -3,6 +3,7 @@
 
 using UnityEngine;
 using HoloToolkit.Examples.Prototyping;
+using System;
 
 namespace HoloToolkit.Examples.InteractiveElements
 {
@@ -19,6 +20,8 @@ namespace HoloToolkit.Examples.InteractiveElements
 
         private Vector3InteractiveTheme mScaleTheme;
         private Material mMaterial;
+        
+        private string mCheckThemeTag = "";
 
         /// <summary>
         /// Get Scale to Value
@@ -36,7 +39,18 @@ namespace HoloToolkit.Examples.InteractiveElements
         /// </summary>
         private void Start()
         {
+            if (mScaleTheme == null)
+            {
+                SetTheme();
+            }
+
+            RefreshIfNeeded();
+        }
+
+        public override void SetTheme()
+        {
             mScaleTheme = GetVector3Theme(ThemeTag);
+            mCheckThemeTag = ThemeTag;
         }
 
         /// <summary>
@@ -58,6 +72,15 @@ namespace HoloToolkit.Examples.InteractiveElements
                 {
                     transform.localScale = mScaleTheme.GetThemeValue(state);
                 }
+            }
+        }
+
+        private void Update()
+        {
+            if (!mCheckThemeTag.Equals(ThemeTag))
+            {
+                SetTheme();
+                RefreshIfNeeded();
             }
         }
     }

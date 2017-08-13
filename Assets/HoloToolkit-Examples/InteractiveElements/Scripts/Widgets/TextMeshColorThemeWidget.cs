@@ -3,6 +3,7 @@
 
 using HoloToolkit.Examples.Prototyping;
 using UnityEngine;
+using System;
 
 namespace HoloToolkit.Examples.InteractiveElements
 {
@@ -16,9 +17,11 @@ namespace HoloToolkit.Examples.InteractiveElements
 
         [Tooltip("A component for color transitions: optional")]
         public ColorTransition ColorBlender;
-        
+
         private ColorInteractiveTheme mTextColorTheme;
         private TextMesh mTextMesh;
+
+        private string mCheckThemeTag = "";
 
         void Awake()
         {
@@ -38,7 +41,17 @@ namespace HoloToolkit.Examples.InteractiveElements
 
         private void Start()
         {
+            if (mTextColorTheme == null)
+            {
+                SetTheme();
+            }
+            RefreshIfNeeded();
+        }
+
+        public override void SetTheme()
+        {
             mTextColorTheme = GetColorTheme(ThemeTag);
+            mCheckThemeTag = ThemeTag;
         }
 
         /// <summary>
@@ -59,6 +72,15 @@ namespace HoloToolkit.Examples.InteractiveElements
                 {
                     mTextMesh.color = mTextColorTheme.GetThemeValue(state);
                 }
+            }
+        }
+
+        private void Update()
+        {
+            if (!mCheckThemeTag.Equals(ThemeTag))
+            {
+                SetTheme();
+                RefreshIfNeeded();
             }
         }
     }
