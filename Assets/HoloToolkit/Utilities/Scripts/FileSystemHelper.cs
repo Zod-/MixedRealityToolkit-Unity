@@ -23,7 +23,7 @@ namespace HoloToolkit.Unity
             }
             catch (System.Exception ex)
             {
-                Debug.LogError("Error writing to file: " + ex.ToString());
+                Debug.LogError("Error writing to file: " + ex);
             }
         }
 
@@ -47,7 +47,7 @@ namespace HoloToolkit.Unity
             }
             catch (System.Exception ex)
             {
-                Debug.LogError("Read file exception: " + ex.ToString());
+                Debug.LogError("Read file exception: " + ex);
             }
             return result;
         }

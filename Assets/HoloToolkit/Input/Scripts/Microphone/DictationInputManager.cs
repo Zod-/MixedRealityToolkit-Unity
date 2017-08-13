@@ -195,7 +195,7 @@ namespace HoloToolkit.Unity.InputModule
         private static void DictationRecognizer_DictationHypothesis(string text)
         {
             // We don't want to append to textSoFar yet, because the hypothesis may have changed on the next event.
-            dictationResult = textSoFar.ToString() + " " + text + "...";
+            dictationResult = textSoFar + " " + text + "...";
 
             InputManager.Instance.RaiseDictationHypothesis(Instance, 0, dictationResult);
         }
@@ -243,7 +243,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <param name="hresult">The int representation of the hresult.</param>
         private static void DictationRecognizer_DictationError(string error, int hresult)
         {
-            dictationResult = error + "\nHRESULT: " + hresult.ToString();
+            dictationResult = error + "\nHRESULT: " + hresult;
 
             InputManager.Instance.RaiseDictationError(Instance, 0, dictationResult);
             textSoFar = null;

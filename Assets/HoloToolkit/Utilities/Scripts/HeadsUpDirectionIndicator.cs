@@ -78,7 +78,7 @@ namespace HoloToolkit.Unity
 
             // Allocate the space to hold the indicator volume planes. Later portions of the algorithm take for
             // granted that these objects have been initialized.
-            indicatorVolume = new Plane[]
+            indicatorVolume = new[]
             {
                 new Plane(),
                 new Plane(),

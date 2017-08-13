@@ -122,7 +122,7 @@ namespace HoloToolkit.Unity.InputModule
         {
             if (handId >= editorHandsData.Length)
             {
-                string message = string.Format("GetHandDelta called with invalid hand ID {0}.", handId.ToString());
+                string message = string.Format("GetHandDelta called with invalid hand ID {0}.", handId);
                 throw new ArgumentException(message, "handId");
             }
 
@@ -138,7 +138,7 @@ namespace HoloToolkit.Unity.InputModule
         {
             if (handId >= editorHandsData.Length)
             {
-                var message = string.Format("GetFingerState called with invalid hand ID {0}.", handId.ToString());
+                var message = string.Format("GetFingerState called with invalid hand ID {0}.", handId);
                 throw new ArgumentException(message, "handId");
             }
 
@@ -154,7 +154,7 @@ namespace HoloToolkit.Unity.InputModule
         {
             if (handId >= editorHandsData.Length)
             {
-                var message = string.Format("GetFingerDown called with invalid hand ID {0}.", handId.ToString());
+                var message = string.Format("GetFingerDown called with invalid hand ID {0}.", handId);
                 throw new ArgumentException(message, "handId");
             }
 
@@ -170,7 +170,7 @@ namespace HoloToolkit.Unity.InputModule
         {
             if (handId >= editorHandsData.Length)
             {
-                var message = string.Format("GetFingerUp called with invalid hand ID {0}.", handId.ToString());
+                var message = string.Format("GetFingerUp called with invalid hand ID {0}.", handId);
                 throw new ArgumentException(message, "handId");
             }
 

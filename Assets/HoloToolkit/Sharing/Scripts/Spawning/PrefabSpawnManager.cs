@@ -92,7 +92,7 @@ namespace HoloToolkit.Sharing.Spawning
 
         protected virtual string CreateInstanceName(string baseName)
         {
-            string instanceName = string.Format("{0}{1}_{2}", baseName, objectCreationCounter.ToString(), NetworkManager.AppInstanceUniqueId);
+            string instanceName = string.Format("{0}{1}_{2}", baseName, objectCreationCounter, NetworkManager.AppInstanceUniqueId);
             objectCreationCounter++;
             return instanceName;
         }

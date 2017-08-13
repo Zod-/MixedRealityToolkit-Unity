@@ -46,7 +46,7 @@ namespace HoloToolkit.Unity
                 bool foundHoloLens = false;
 
                 StringBuilder builder = new StringBuilder(); // Used to build the final output
-                string[] lines = settings.Split(new char[] { '\n' });
+                string[] lines = settings.Split('\n');
                 for (int i = 0; i < lines.Length; ++i)
                 {
                     string line = lines[i];

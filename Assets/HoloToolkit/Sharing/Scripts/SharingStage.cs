@@ -307,7 +307,7 @@ namespace HoloToolkit.Sharing
                 else
                 {
                     User localUser = Manager.GetLocalUser();
-                    Manager.SetUserName(userName + localUser.GetID().ToString());
+                    Manager.SetUserName(userName + localUser.GetID());
                 }
 #endif
             }
@@ -331,7 +331,7 @@ namespace HoloToolkit.Sharing
             }
             else
             {
-                Log.Error(string.Format("Cannot connect to server {0}:{1}", ServerAddress, ServerPort.ToString()));
+                Log.Error(string.Format("Cannot connect to server {0}:{1}", ServerAddress, ServerPort));
             }
         }
 
@@ -381,7 +381,7 @@ namespace HoloToolkit.Sharing
                 Connect();
                 if (ShowDetailedLogs)
                 {
-                    Debug.LogFormat("Connected to: {0}:{1}", ServerAddress, ServerPort.ToString());
+                    Debug.LogFormat("Connected to: {0}:{1}", ServerAddress, ServerPort);
                 }
             }
         }

@@ -128,7 +128,7 @@ namespace HoloToolkit.Unity
                     });
                     break;
                 default:
-                    Debug.LogErrorFormat("Unexpected spatialization type: {0}", audioEvent.Spatialization.ToString());
+                    Debug.LogErrorFormat("Unexpected spatialization type: {0}", audioEvent.Spatialization);
                     break;
             }
 

@@ -106,14 +106,14 @@ namespace HoloToolkit.Unity.Tests
         [Test]
         public void Vector2Collection_Average()
         {
-            var vectors = new Vector2[] { new Vector2(1f, 2f), new Vector2(2f, 3f) };
+            var vectors = new[] { new Vector2(1f, 2f), new Vector2(2f, 3f) };
             Assert.That(VectorExtensions.Average(vectors), Is.EqualTo(new Vector2(1.5f, 2.5f)));
         }
 
         [Test]
         public void Vector3Collection_Average()
         {
-            var vectors = new Vector3[] { new Vector3(1f, 2f, 3f), new Vector3(2f, 3f, 4f) };
+            var vectors = new[] { new Vector3(1f, 2f, 3f), new Vector3(2f, 3f, 4f) };
             Assert.That(VectorExtensions.Average(vectors), Is.EqualTo(new Vector3(1.5f, 2.5f, 3.5f)));
         }
 
@@ -134,14 +134,14 @@ namespace HoloToolkit.Unity.Tests
         [Test]
         public void Vector2Collection_Median()
         {
-            var vectors = new Vector2[] { new Vector3(10f, 10f), new Vector2(1f, 1f), new Vector2(5f, 5f) };
+            var vectors = new[] { new Vector2(10f, 10f), new Vector2(1f, 1f), new Vector2(5f, 5f) };
             Assert.That(VectorExtensions.Median(vectors), Is.EqualTo(new Vector2(5f, 5f)));
         }
 
         [Test]
         public void Vector3Collection_Median()
         {
-            var vectors = new Vector3[] { new Vector3(10f, 10f, 10f), new Vector3(1f, 1f, 1f), new Vector3(5f, 5f, 5f) };
+            var vectors = new[] { new Vector3(10f, 10f, 10f), new Vector3(1f, 1f, 1f), new Vector3(5f, 5f, 5f) };
             Assert.That(VectorExtensions.Median(vectors), Is.EqualTo(new Vector3(5f, 5f, 5f)));
         }
 

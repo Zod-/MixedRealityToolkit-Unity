@@ -125,7 +125,7 @@ namespace HoloToolkit.Examples.SpatialUnderstandingFeatureOverview
                         case SpatialUnderstanding.ScanStates.Done:
                             return "Scan complete - Use the menu to run queries";
                         default:
-                            return "ScanState = " + SpatialUnderstanding.Instance.ScanState.ToString();
+                            return "ScanState = " + SpatialUnderstanding.Instance.ScanState;
                     }
                 }
                 return "";

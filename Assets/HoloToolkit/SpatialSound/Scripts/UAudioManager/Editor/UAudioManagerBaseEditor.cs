@@ -43,7 +43,7 @@ namespace HoloToolkit.Unity
                     TEvent selectedEvent;
 
                     selectedEvent = myTarget.EditorEvents[selectedEventIndex];
-                    SerializedProperty selectedEventProperty = serializedObject.FindProperty("events.Array.data[" + selectedEventIndex.ToString() + "]");
+                    SerializedProperty selectedEventProperty = serializedObject.FindProperty("events.Array.data[" + selectedEventIndex + "]");
                     EditorGUILayout.Space();
 
                     if (selectedEventProperty != null)
@@ -277,7 +277,7 @@ namespace HoloToolkit.Unity
             {
                 if (string.IsNullOrEmpty(EditorEvents[i].Name))
                 {
-                    EditorEvents[i].Name = "_NewEvent" + i.ToString();
+                    EditorEvents[i].Name = "_NewEvent" + i;
                 }
 
                 while (previousEventNames.Contains(EditorEvents[i].Name))

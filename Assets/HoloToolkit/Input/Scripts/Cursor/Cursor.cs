@@ -293,15 +293,15 @@ namespace HoloToolkit.Unity.InputModule
             // If no game object is hit, put the cursor at the default distance
             if (newTargetedObject == null)
             {
-                this.TargetedObject = null;
-                this.TargetedCursorModifier = null;
+                TargetedObject = null;
+                TargetedCursorModifier = null;
                 targetPosition = gazeManager.GazeOrigin + gazeManager.GazeNormal * DefaultCursorDistance;
                 targetRotation = lookForward.magnitude > 0 ? Quaternion.LookRotation(lookForward, Vector3.up) : transform.rotation;
             }
             else
             {
                 // Update currently targeted object
-                this.TargetedObject = newTargetedObject;
+                TargetedObject = newTargetedObject;
 
                 if (TargetedCursorModifier != null)
                 {

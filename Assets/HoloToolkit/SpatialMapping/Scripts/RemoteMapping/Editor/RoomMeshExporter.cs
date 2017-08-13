@@ -47,7 +47,7 @@ namespace HoloToolkit.Unity
         [MenuItem("HoloToolkit/Export/Export Room (.room) To Wavefront (.obj)...")]
         public static void ExportRoomToWavefront()
         {
-            string selectedFile = EditorUtility.OpenFilePanelWithFilters("Select Room File", MeshSaver.MeshFolderName, new string[] { "Room", "room" });
+            string selectedFile = EditorUtility.OpenFilePanelWithFilters("Select Room File", MeshSaver.MeshFolderName, new[] { "Room", "room" });
             if (string.IsNullOrEmpty(selectedFile))
             {
                 return;

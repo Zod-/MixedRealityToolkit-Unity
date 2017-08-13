@@ -43,7 +43,7 @@ namespace HoloToolkit.Unity.SpatialMapping.Tests
                 PlaneFinding.FindPlanes(meshData, SnapToGravityThreshold, MinArea);
         }
 
-        private static Color[] colors = new Color[] { Color.blue, Color.cyan, Color.green, Color.magenta, Color.red, Color.white, Color.yellow };
+        private static Color[] colors = new[] { Color.blue, Color.cyan, Color.green, Color.magenta, Color.red, Color.white, Color.yellow };
         private void OnDrawGizmos()
         {
             if (planes != null)

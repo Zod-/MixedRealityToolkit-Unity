@@ -54,7 +54,7 @@ namespace HoloToolkit.Sharing.Utilities
                 {
                     if (SharingStage.Instance.ShowDetailedLogs)
                     {
-                        Debug.LogFormat("AutoJoinSession: Session connected is {0} with {1} Sessions.", sessionsTracker.IsServerConnected.ToString(), sessionsTracker.Sessions.Count.ToString());
+                        Debug.LogFormat("AutoJoinSession: Session connected is {0} with {1} Sessions.", sessionsTracker.IsServerConnected, sessionsTracker.Sessions.Count);
                         Debug.Log("AutoJoinSession: Looking for " + SessionName);
                     }
                     bool sessionFound = false;

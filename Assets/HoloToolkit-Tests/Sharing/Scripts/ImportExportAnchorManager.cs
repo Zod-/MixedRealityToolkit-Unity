@@ -383,12 +383,12 @@ namespace HoloToolkit.Sharing.Tests
 
                 if (SharingStage.Instance.ShowDetailedLogs)
                 {
-                    Debug.LogFormat("Anchor Manager: Anchor size: {0} bytes.", datasize.ToString());
+                    Debug.LogFormat("Anchor Manager: Anchor size: {0} bytes.", datasize);
                 }
 
                 if (AnchorDebugText != null)
                 {
-                    AnchorDebugText.text += string.Format("\nAnchor size: {0} bytes.", datasize.ToString());
+                    AnchorDebugText.text += string.Format("\nAnchor size: {0} bytes.", datasize);
                 }
 
                 rawAnchorData = new byte[datasize];
@@ -578,14 +578,14 @@ namespace HoloToolkit.Sharing.Tests
             {
                 Debug.LogFormat("Anchor Manager: In room {0} with ID {1}",
                     roomManager.GetCurrentRoom().GetName().GetString(),
-                    roomManager.GetCurrentRoom().GetID().ToString());
+                    roomManager.GetCurrentRoom().GetID());
             }
 
             if (AnchorDebugText != null)
             {
                 AnchorDebugText.text += string.Format("\nIn room {0} with ID {1}",
                     roomManager.GetCurrentRoom().GetName().GetString(),
-                    roomManager.GetCurrentRoom().GetID().ToString());
+                    roomManager.GetCurrentRoom().GetID());
             }
 
             yield return null;
@@ -601,12 +601,12 @@ namespace HoloToolkit.Sharing.Tests
 
             if (SharingStage.Instance.ShowDetailedLogs)
             {
-                Debug.LogFormat("Anchor Manager: {0} anchors found.", anchorCount.ToString());
+                Debug.LogFormat("Anchor Manager: {0} anchors found.", anchorCount);
             }
 
             if (AnchorDebugText != null)
             {
-                AnchorDebugText.text += string.Format("\n{0} anchors found.", anchorCount.ToString());
+                AnchorDebugText.text += string.Format("\n{0} anchors found.", anchorCount);
             }
 
 #if UNITY_WSA && !UNITY_EDITOR
@@ -642,7 +642,7 @@ namespace HoloToolkit.Sharing.Tests
 
             if (AnchorDebugText != null)
             {
-                AnchorDebugText.text += anchorCount > 0 ? "\n" + currentRoom.GetAnchorName(0).ToString() : "\nNo Anchors Found";
+                AnchorDebugText.text += anchorCount > 0 ? "\n" + currentRoom.GetAnchorName(0) : "\nNo Anchors Found";
             }
 
 #endif
