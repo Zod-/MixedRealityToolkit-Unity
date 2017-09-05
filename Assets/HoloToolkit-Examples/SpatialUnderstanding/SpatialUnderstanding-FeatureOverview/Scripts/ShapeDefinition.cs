@@ -21,7 +21,7 @@ namespace HoloToolkit.Examples.SpatialUnderstandingFeatureOverview
         // Functions
         private void Start()
         {
-            if (SpatialUnderstanding.Instance != null)
+            if (SpatialUnderstanding.IsInitialized)
             {
                 SpatialUnderstanding.Instance.ScanStateChanged += OnScanStateChanged;
             }
@@ -31,7 +31,7 @@ namespace HoloToolkit.Examples.SpatialUnderstandingFeatureOverview
         {
             base.OnDestroy();
 
-            if (SpatialUnderstanding.Instance != null)
+            if (SpatialUnderstanding.IsInitialized)
             {
                 SpatialUnderstanding.Instance.ScanStateChanged -= OnScanStateChanged;
             }

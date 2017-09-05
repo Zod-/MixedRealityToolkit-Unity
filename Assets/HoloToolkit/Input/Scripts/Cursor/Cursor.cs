@@ -243,7 +243,7 @@ namespace HoloToolkit.Unity.InputModule
                 gazeManager.FocusedObjectChanged -= OnFocusedObjectChanged;
             }
 
-            if (InputManager.Instance != null)
+            if (InputManager.IsInitialized)
             {
                 InputManager.Instance.RemoveGlobalListener(gameObject);
                 InputManager.Instance.InputEnabled -= OnInputEnabled;

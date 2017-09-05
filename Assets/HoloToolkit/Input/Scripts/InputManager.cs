@@ -199,7 +199,7 @@ namespace HoloToolkit.Unity.InputModule
         {
             InitializeEventDatas();
 
-            if (GazeManager.Instance == null)
+            if (!GazeManager.IsInitialized)
             {
                 Debug.LogError("InputManager requires an active GazeManager in the scene");
             }
@@ -289,7 +289,7 @@ namespace HoloToolkit.Unity.InputModule
         /// </summary>
         private void RegisterGazeManager()
         {
-            if (!isRegisteredToGazeChanges && GazeManager.Instance != null)
+            if (!isRegisteredToGazeChanges && GazeManager.IsInitialized)
             {
                 GazeManager.Instance.FocusedObjectChanged += GazeManager_FocusedChanged;
                 isRegisteredToGazeChanges = true;
@@ -301,7 +301,7 @@ namespace HoloToolkit.Unity.InputModule
         /// </summary>
         private void UnregisterGazeManager()
         {
-            if (isRegisteredToGazeChanges && GazeManager.Instance != null)
+            if (isRegisteredToGazeChanges && GazeManager.IsInitialized)
             {
                 GazeManager.Instance.FocusedObjectChanged -= GazeManager_FocusedChanged;
                 isRegisteredToGazeChanges = false;

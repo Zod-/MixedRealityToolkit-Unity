@@ -130,7 +130,7 @@ namespace HoloToolkit.Examples.SharingWithUNET
                 return false;
             }
 
-            if (SharedCollection.Instance == null)
+            if (!SharedCollection.IsInitialized)
             {
                 Debug.Log("No SharedCollection found in scene");
                 return false;

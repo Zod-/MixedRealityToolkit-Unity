@@ -135,7 +135,7 @@ namespace HoloToolkit.Unity.SpatialMapping.Tests
         /// </summary>
         protected override void OnDestroy()
         {
-            if (SurfaceMeshesToPlanes.Instance != null)
+            if (SurfaceMeshesToPlanes.IsInitialized)
             {
                 SurfaceMeshesToPlanes.Instance.MakePlanesComplete -= SurfaceMeshesToPlanes_MakePlanesComplete;
             }

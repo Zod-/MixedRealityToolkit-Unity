@@ -156,7 +156,7 @@ namespace HoloToolkit.Unity.InputModule
 
         private void AttachWorldAnchor()
         {
-            if (WorldAnchorManager.Instance != null)
+            if (WorldAnchorManager.IsInitialized)
             {
                 // Add world anchor when object placement is done.
                 WorldAnchorManager.Instance.AttachAnchor(gameObject, SavedAnchorFriendlyName);
@@ -165,7 +165,7 @@ namespace HoloToolkit.Unity.InputModule
 
         private void RemoveWorldAnchor()
         {
-            if (WorldAnchorManager.Instance != null)
+            if (WorldAnchorManager.IsInitialized)
             {
                 //Removes existing world anchor if any exist.
                 WorldAnchorManager.Instance.RemoveAnchor(gameObject);
@@ -177,7 +177,7 @@ namespace HoloToolkit.Unity.InputModule
         /// </summary>
         private void ToggleSpatialMesh()
         {
-            if (SpatialMappingManager.Instance != null)
+            if (SpatialMappingManager.IsInitialized)
             {
                 SpatialMappingManager.Instance.DrawVisualMeshes = IsBeingPlaced && AllowMeshVisualizationControl;
             }
@@ -206,7 +206,7 @@ namespace HoloToolkit.Unity.InputModule
         /// <returns>Wheter it found a hit or not</returns>
         private static bool SpatialMappingRaycast(Vector3 origin, Vector3 direction, out RaycastHit spatialMapHit)
         {
-            if (SpatialMappingManager.Instance != null)
+            if (SpatialMappingManager.IsInitialized)
             {
                 RaycastHit hitInfo;
                 if (Physics.Raycast(origin, direction, out hitInfo, 30.0f, SpatialMappingManager.Instance.LayerMask))

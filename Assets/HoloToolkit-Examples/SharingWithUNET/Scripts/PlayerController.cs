@@ -55,7 +55,7 @@ namespace HoloToolkit.Examples.SharingWithUNET
 
         private void Start()
         {
-            if (SharedCollection.Instance == null)
+            if (!SharedCollection.IsInitialized)
             {
                 Debug.LogError("This script required a SharedCollection script attached to a gameobject in the scene");
                 Destroy(this);

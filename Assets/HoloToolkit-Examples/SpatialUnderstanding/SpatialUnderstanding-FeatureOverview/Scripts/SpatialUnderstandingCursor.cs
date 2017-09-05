@@ -115,7 +115,7 @@ namespace HoloToolkit.Examples.SpatialUnderstandingFeatureOverview
             base.LateUpdate();
 
             // Basic checks
-            if ((SpatialUnderstanding.Instance == null) ||
+            if ((!SpatialUnderstanding.IsInitialized) ||
                ((SpatialUnderstanding.Instance.ScanState != SpatialUnderstanding.ScanStates.Scanning) &&
                 (SpatialUnderstanding.Instance.ScanState != SpatialUnderstanding.ScanStates.Finishing) &&
                 (SpatialUnderstanding.Instance.ScanState != SpatialUnderstanding.ScanStates.Done)))

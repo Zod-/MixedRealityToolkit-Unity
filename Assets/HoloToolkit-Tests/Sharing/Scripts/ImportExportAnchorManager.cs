@@ -86,7 +86,7 @@ namespace HoloToolkit.Sharing.Tests
         {
             get
             {
-                if (SharingStage.Instance == null || SharingStage.Instance.SessionUsersTracker == null)
+                if (!SharingStage.IsInitialized || SharingStage.Instance.SessionUsersTracker == null)
                 {
                     return false;
                 }
@@ -262,7 +262,7 @@ namespace HoloToolkit.Sharing.Tests
 
         protected override void OnDestroy()
         {
-            if (SharingStage.Instance != null)
+            if (SharingStage.IsInitialized)
             {
                 if (SharingStage.Instance.SessionsTracker != null)
                 {

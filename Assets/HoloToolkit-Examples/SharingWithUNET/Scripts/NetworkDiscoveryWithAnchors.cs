@@ -43,7 +43,7 @@ namespace HoloToolkit.Examples.SharingWithUNET
         private bool CheckComponents()
         {
 #if !UNITY_EDITOR
-            if (GenericNetworkTransmitter.Instance == null)
+            if (!GenericNetworkTransmitter.IsInitialized)
             {
                 Debug.Log("Need a UNetNetworkTransmitter in the scene for sending anchor data");
                 return false;

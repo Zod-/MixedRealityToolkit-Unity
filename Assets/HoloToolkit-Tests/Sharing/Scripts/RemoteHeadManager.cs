@@ -63,7 +63,7 @@ namespace HoloToolkit.Sharing.Tests
 
         protected override void OnDestroy()
         {
-            if (SharingStage.Instance != null)
+            if (SharingStage.IsInitialized)
             {
                 if (SharingStage.Instance.SessionUsersTracker != null)
                 {
